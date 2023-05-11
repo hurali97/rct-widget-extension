@@ -13,7 +13,15 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		16E5A112D7337D7CB81CBBF1 /* libPods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E48369A00F45473A82807A98 /* libPods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.a */; };
+		610C04E72A0A46EE0078E704 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C04E62A0A46EE0078E704 /* File.swift */; };
+		61501BC32A0D4AA9009687AC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61501BC22A0D4AA9009687AC /* WidgetKit.framework */; };
+		61501BC52A0D4AA9009687AC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61501BC42A0D4AA9009687AC /* SwiftUI.framework */; };
+		61501BC82A0D4AA9009687AC /* TodayWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61501BC72A0D4AA9009687AC /* TodayWidgetBundle.swift */; };
+		61501BCA2A0D4AA9009687AC /* TodayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61501BC92A0D4AA9009687AC /* TodayWidget.swift */; };
+		61501BCC2A0D4AAB009687AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61501BCB2A0D4AAB009687AC /* Assets.xcassets */; };
+		61501BD02A0D4AAB009687AC /* TodayWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 61501BC12A0D4AA9009687AC /* TodayWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B08D9507C55A52D3596EE016 /* libPods-RctWidgetExtensionExample-TodayWidgetExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D034DF55AC56060D0549F162 /* libPods-RctWidgetExtensionExample-TodayWidgetExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +32,35 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = RctWidgetExtensionExample;
 		};
+		61501BCE2A0D4AAB009687AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61501BC02A0D4AA9009687AC;
+			remoteInfo = TodayWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		61501BD12A0D4AAB009687AC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				61501BD02A0D4AAB009687AC /* TodayWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* RctWidgetExtensionExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RctWidgetExtensionExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RctWidgetExtensionExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RctWidgetExtensionExampleTests.m; sourceTree = "<group>"; };
 		0B69D0F8E4D5E5F15E29E409 /* Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests/Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		106E410D7C7150D85D975595 /* Pods-RctWidgetExtensionExample-TodayWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RctWidgetExtensionExample-TodayWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-RctWidgetExtensionExample-TodayWidgetExtension/Pods-RctWidgetExtensionExample-TodayWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RctWidgetExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RctWidgetExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RctWidgetExtensionExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RctWidgetExtensionExample/AppDelegate.m; sourceTree = "<group>"; };
@@ -39,7 +69,18 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RctWidgetExtensionExample/main.m; sourceTree = "<group>"; };
 		174820739C34A71F591BB85D /* Pods-RctWidgetExtensionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RctWidgetExtensionExample.debug.xcconfig"; path = "Target Support Files/Pods-RctWidgetExtensionExample/Pods-RctWidgetExtensionExample.debug.xcconfig"; sourceTree = "<group>"; };
 		2CC79FF8C0258C078EFE376C /* Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests/Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EC7A5C6EA05D1C1484C96F2 /* Pods-RctWidgetExtensionExample-TodayWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RctWidgetExtensionExample-TodayWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-RctWidgetExtensionExample-TodayWidgetExtension/Pods-RctWidgetExtensionExample-TodayWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		610C04E52A0A46EE0078E704 /* RctWidgetExtensionExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RctWidgetExtensionExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		610C04E62A0A46EE0078E704 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		61501BC12A0D4AA9009687AC /* TodayWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		61501BC22A0D4AA9009687AC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		61501BC42A0D4AA9009687AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		61501BC72A0D4AA9009687AC /* TodayWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWidgetBundle.swift; sourceTree = "<group>"; };
+		61501BC92A0D4AA9009687AC /* TodayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWidget.swift; sourceTree = "<group>"; };
+		61501BCB2A0D4AAB009687AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61501BCD2A0D4AAB009687AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RctWidgetExtensionExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D034DF55AC56060D0549F162 /* libPods-RctWidgetExtensionExample-TodayWidgetExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RctWidgetExtensionExample-TodayWidgetExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96FC3811015CF92A20A2A4C /* libPods-RctWidgetExtensionExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RctWidgetExtensionExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48369A00F45473A82807A98 /* libPods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -60,6 +101,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EC4559E80C1A86610EAFB2D /* libPods-RctWidgetExtensionExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61501BBE2A0D4AA9009687AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61501BC52A0D4AA9009687AC /* SwiftUI.framework in Frameworks */,
+				61501BC32A0D4AA9009687AC /* WidgetKit.framework in Frameworks */,
+				B08D9507C55A52D3596EE016 /* libPods-RctWidgetExtensionExample-TodayWidgetExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +153,22 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				D96FC3811015CF92A20A2A4C /* libPods-RctWidgetExtensionExample.a */,
 				E48369A00F45473A82807A98 /* libPods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.a */,
+				61501BC22A0D4AA9009687AC /* WidgetKit.framework */,
+				61501BC42A0D4AA9009687AC /* SwiftUI.framework */,
+				D034DF55AC56060D0549F162 /* libPods-RctWidgetExtensionExample-TodayWidgetExtension.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61501BC62A0D4AA9009687AC /* TodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				61501BC72A0D4AA9009687AC /* TodayWidgetBundle.swift */,
+				61501BC92A0D4AA9009687AC /* TodayWidget.swift */,
+				61501BCB2A0D4AAB009687AC /* Assets.xcassets */,
+				61501BCD2A0D4AAB009687AC /* Info.plist */,
+			);
+			path = TodayWidget;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -116,12 +181,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				610C04E62A0A46EE0078E704 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* RctWidgetExtensionExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RctWidgetExtensionExampleTests */,
+				61501BC62A0D4AA9009687AC /* TodayWidget */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8F8124F1CFAA2FBEC3B72784 /* Pods */,
+				610C04E52A0A46EE0078E704 /* RctWidgetExtensionExample-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -133,6 +201,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* RctWidgetExtensionExample.app */,
 				00E356EE1AD99517003FC87E /* RctWidgetExtensionExampleTests.xctest */,
+				61501BC12A0D4AA9009687AC /* TodayWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,8 +213,9 @@
 				FDC55987C0F37A29D82DA95B /* Pods-RctWidgetExtensionExample.release.xcconfig */,
 				2CC79FF8C0258C078EFE376C /* Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.debug.xcconfig */,
 				0B69D0F8E4D5E5F15E29E409 /* Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.release.xcconfig */,
+				2EC7A5C6EA05D1C1484C96F2 /* Pods-RctWidgetExtensionExample-TodayWidgetExtension.debug.xcconfig */,
+				106E410D7C7150D85D975595 /* Pods-RctWidgetExtensionExample-TodayWidgetExtension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,15 +253,36 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				06D5804111034AD71DCDFCB6 /* [CP] Copy Pods Resources */,
+				61501BD12A0D4AAB009687AC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				61501BCF2A0D4AAB009687AC /* PBXTargetDependency */,
 			);
 			name = RctWidgetExtensionExample;
 			productName = RctWidgetExtensionExample;
 			productReference = 13B07F961A680F5B00A75B9A /* RctWidgetExtensionExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		61501BC02A0D4AA9009687AC /* TodayWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61501BD42A0D4AAB009687AC /* Build configuration list for PBXNativeTarget "TodayWidgetExtension" */;
+			buildPhases = (
+				233BBED4D4EFB8BADBDE7CB9 /* [CP] Check Pods Manifest.lock */,
+				61501BBD2A0D4AA9009687AC /* Sources */,
+				61501BBE2A0D4AA9009687AC /* Frameworks */,
+				61501BBF2A0D4AA9009687AC /* Resources */,
+				2B24C9091C7C17785818FFA6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayWidgetExtension;
+			productName = TodayWidgetExtension;
+			productReference = 61501BC12A0D4AA9009687AC /* TodayWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -199,6 +290,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -206,7 +298,10 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1430;
+					};
+					61501BC02A0D4AA9009687AC = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -225,6 +320,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* RctWidgetExtensionExample */,
 				00E356ED1AD99517003FC87E /* RctWidgetExtensionExampleTests */,
+				61501BC02A0D4AA9009687AC /* TodayWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +339,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61501BBF2A0D4AA9009687AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61501BCC2A0D4AAB009687AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +382,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RctWidgetExtensionExample/Pods-RctWidgetExtensionExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		233BBED4D4EFB8BADBDE7CB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RctWidgetExtensionExample-TodayWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B24C9091C7C17785818FFA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RctWidgetExtensionExample-TodayWidgetExtension/Pods-RctWidgetExtensionExample-TodayWidgetExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RctWidgetExtensionExample-TodayWidgetExtension/Pods-RctWidgetExtensionExample-TodayWidgetExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RctWidgetExtensionExample-TodayWidgetExtension/Pods-RctWidgetExtensionExample-TodayWidgetExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E0A309B7D4717D2D0D92773 /* [CP] Check Pods Manifest.lock */ = {
@@ -376,7 +519,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				610C04E72A0A46EE0078E704 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61501BBD2A0D4AA9009687AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61501BC82A0D4AA9009687AC /* TodayWidgetBundle.swift in Sources */,
+				61501BCA2A0D4AA9009687AC /* TodayWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +541,11 @@
 			target = 13B07F861A680F5B00A75B9A /* RctWidgetExtensionExample */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		61501BCF2A0D4AAB009687AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61501BC02A0D4AA9009687AC /* TodayWidgetExtension */;
+			targetProxy = 61501BCE2A0D4AAB009687AC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -395,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CC79FF8C0258C078EFE376C /* Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -422,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B69D0F8E4D5E5F15E29E409 /* Pods-RctWidgetExtensionExample-RctWidgetExtensionExampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RctWidgetExtensionExampleTests/Info.plist;
@@ -446,22 +606,33 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 174820739C34A71F591BB85D /* Pods-RctWidgetExtensionExample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RctWidgetExtensionExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-lc++",
+					"-l\"stdc++\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RctWidgetExtensionExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "RctWidgetExtensionExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -472,10 +643,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDC55987C0F37A29D82DA95B /* Pods-RctWidgetExtensionExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RctWidgetExtensionExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,12 +658,91 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-lc++",
+					"-l\"stdc++\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RctWidgetExtensionExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "RctWidgetExtensionExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		61501BD22A0D4AAB009687AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC7A5C6EA05D1C1484C96F2 /* Pods-RctWidgetExtensionExample-TodayWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TodayWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RctWidgetExtensionExample.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61501BD32A0D4AAB009687AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106E410D7C7150D85D975595 /* Pods-RctWidgetExtensionExample-TodayWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TodayWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RctWidgetExtensionExample.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -496,8 +750,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -526,7 +781,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -547,12 +802,17 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -561,8 +821,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -591,7 +852,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -605,11 +866,17 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -632,6 +899,15 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61501BD42A0D4AAB009687AC /* Build configuration list for PBXNativeTarget "TodayWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61501BD22A0D4AAB009687AC /* Debug */,
+				61501BD32A0D4AAB009687AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

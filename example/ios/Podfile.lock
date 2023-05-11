@@ -19,14 +19,17 @@ PODS:
     - boost-for-react-native
     - DoubleConversion
     - glog
+  - RCT-Folly/Fabric (2020.01.13.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
   - RCTRequired (0.64.0)
   - RCTTypeSafety (0.64.0):
     - FBLazyVector (= 0.64.0)
     - RCT-Folly (= 2020.01.13.00)
     - RCTRequired (= 0.64.0)
     - React-Core (= 0.64.0)
-  - RCTWidgetExtension (0.1.0):
-    - React-Core
+  - RctWidgetExtension (0.1.0)
   - React (0.64.0):
     - React-Core (= 0.64.0)
     - React-Core/DevSupport (= 0.64.0)
@@ -186,6 +189,289 @@ PODS:
     - React-jsinspector (= 0.64.0)
     - React-perflogger (= 0.64.0)
     - React-runtimeexecutor (= 0.64.0)
+  - React-Fabric (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-Fabric/animations (= 0.64.0)
+    - React-Fabric/attributedstring (= 0.64.0)
+    - React-Fabric/better (= 0.64.0)
+    - React-Fabric/componentregistry (= 0.64.0)
+    - React-Fabric/components (= 0.64.0)
+    - React-Fabric/config (= 0.64.0)
+    - React-Fabric/core (= 0.64.0)
+    - React-Fabric/debug (= 0.64.0)
+    - React-Fabric/imagemanager (= 0.64.0)
+    - React-Fabric/mounting (= 0.64.0)
+    - React-Fabric/scheduler (= 0.64.0)
+    - React-Fabric/templateprocessor (= 0.64.0)
+    - React-Fabric/textlayoutmanager (= 0.64.0)
+    - React-Fabric/uimanager (= 0.64.0)
+    - React-Fabric/utils (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/animations (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/attributedstring (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/better (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/componentregistry (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-Fabric/components/activityindicator (= 0.64.0)
+    - React-Fabric/components/image (= 0.64.0)
+    - React-Fabric/components/inputaccessory (= 0.64.0)
+    - React-Fabric/components/legacyviewmanagerinterop (= 0.64.0)
+    - React-Fabric/components/modal (= 0.64.0)
+    - React-Fabric/components/picker (= 0.64.0)
+    - React-Fabric/components/rncore (= 0.64.0)
+    - React-Fabric/components/root (= 0.64.0)
+    - React-Fabric/components/safeareaview (= 0.64.0)
+    - React-Fabric/components/scrollview (= 0.64.0)
+    - React-Fabric/components/slider (= 0.64.0)
+    - React-Fabric/components/text (= 0.64.0)
+    - React-Fabric/components/textinput (= 0.64.0)
+    - React-Fabric/components/unimplementedview (= 0.64.0)
+    - React-Fabric/components/view (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/activityindicator (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/image (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/inputaccessory (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/legacyviewmanagerinterop (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/modal (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/picker (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/rncore (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/root (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/safeareaview (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/scrollview (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/slider (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/text (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/textinput (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/unimplementedview (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/components/view (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+    - Yoga
+  - React-Fabric/config (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/core (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/debug (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/imagemanager (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - React-RCTImage (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/mounting (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/scheduler (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/templateprocessor (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/textlayoutmanager (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-Fabric/uimanager
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/uimanager (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-Fabric/utils (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - RCTRequired (= 0.64.0)
+    - RCTTypeSafety (= 0.64.0)
+    - React-graphics (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-jsiexecutor (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-graphics (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
   - React-jsi (0.64.0):
     - boost-for-react-native (= 1.63.0)
     - DoubleConversion
@@ -193,6 +479,11 @@ PODS:
     - RCT-Folly (= 2020.01.13.00)
     - React-jsi/Default (= 0.64.0)
   - React-jsi/Default (0.64.0):
+    - boost-for-react-native (= 1.63.0)
+    - DoubleConversion
+    - glog
+    - RCT-Folly (= 2020.01.13.00)
+  - React-jsi/Fabric (0.64.0):
     - boost-for-react-native (= 1.63.0)
     - DoubleConversion
     - glog
@@ -223,6 +514,11 @@ PODS:
     - React-jsi (= 0.64.0)
     - React-RCTNetwork (= 0.64.0)
     - ReactCommon/turbomodule/core (= 0.64.0)
+  - React-RCTFabric (0.64.0):
+    - RCT-Folly/Fabric (= 2020.01.13.00)
+    - React-Core (= 0.64.0)
+    - React-Fabric (= 0.64.0)
+    - React-RCTImage (= 0.64.0)
   - React-RCTImage (0.64.0):
     - FBReactNativeSpec (= 0.64.0)
     - RCT-Folly (= 2020.01.13.00)
@@ -269,6 +565,16 @@ PODS:
     - React-cxxreact (= 0.64.0)
     - React-jsi (= 0.64.0)
     - React-perflogger (= 0.64.0)
+  - ReactCommon/turbomodule/samples (0.64.0):
+    - DoubleConversion
+    - glog
+    - RCT-Folly (= 2020.01.13.00)
+    - React-callinvoker (= 0.64.0)
+    - React-Core (= 0.64.0)
+    - React-cxxreact (= 0.64.0)
+    - React-jsi (= 0.64.0)
+    - React-perflogger (= 0.64.0)
+    - ReactCommon/turbomodule/core (= 0.64.0)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -277,9 +583,10 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
+  - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
-  - RCTWidgetExtension (from `../..`)
+  - RctWidgetExtension (from `../..`)
   - React (from `../node_modules/react-native/`)
   - React-callinvoker (from `../node_modules/react-native/ReactCommon/callinvoker`)
   - React-Core (from `../node_modules/react-native/`)
@@ -287,13 +594,18 @@ DEPENDENCIES:
   - React-Core/RCTWebSocket (from `../node_modules/react-native/`)
   - React-CoreModules (from `../node_modules/react-native/React/CoreModules`)
   - React-cxxreact (from `../node_modules/react-native/ReactCommon/cxxreact`)
+  - React-Fabric (from `../node_modules/react-native/ReactCommon`)
+  - React-Fabric/components/rncore (from `../node_modules/react-native/ReactCommon`)
+  - React-graphics (from `../node_modules/react-native/ReactCommon/react/renderer/graphics`)
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
+  - React-jsi/Fabric (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
+  - React-RCTFabric (from `../node_modules/react-native/React`)
   - React-RCTImage (from `../node_modules/react-native/Libraries/Image`)
   - React-RCTLinking (from `../node_modules/react-native/Libraries/LinkingIOS`)
   - React-RCTNetwork (from `../node_modules/react-native/Libraries/Network`)
@@ -302,6 +614,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - ReactCommon/turbomodule/samples (from `../node_modules/react-native/ReactCommon`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -323,7 +636,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
     :path: "../node_modules/react-native/Libraries/TypeSafety"
-  RCTWidgetExtension:
+  RctWidgetExtension:
     :path: "../.."
   React:
     :path: "../node_modules/react-native/"
@@ -335,6 +648,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/CoreModules"
   React-cxxreact:
     :path: "../node_modules/react-native/ReactCommon/cxxreact"
+  React-Fabric:
+    :path: "../node_modules/react-native/ReactCommon"
+  React-graphics:
+    :path: "../node_modules/react-native/ReactCommon/react/renderer/graphics"
   React-jsi:
     :path: "../node_modules/react-native/ReactCommon/jsi"
   React-jsiexecutor:
@@ -349,6 +666,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/NativeAnimation"
   React-RCTBlob:
     :path: "../node_modules/react-native/Libraries/Blob"
+  React-RCTFabric:
+    :path: "../node_modules/react-native/React"
   React-RCTImage:
     :path: "../node_modules/react-native/Libraries/Image"
   React-RCTLinking:
@@ -372,17 +691,19 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 49cbe4b43e445b06bf29199b6ad2057649e4c8f5
-  FBReactNativeSpec: 771088d5dcaa469ff80761b8fc091f5a78dff8f5
+  FBReactNativeSpec: 112e889823fd7980e7fa9ae387302232ae102337
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: 2f8cb5b7533219bf4218a045f92768129cf7050a
   RCTTypeSafety: 512728b73549e72ad7330b92f3d42936f2a4de5b
-  RCTWidgetExtension: 505ff3f16f0154a258e632794254246d8e1d6ee7
+  RctWidgetExtension: 256298336359e34c327133a9a11156ae3b90333d
   React: 98eac01574128a790f0bbbafe2d1a8607291ac24
   React-callinvoker: def3f7fae16192df68d9b69fd4bbb59092ee36bc
   React-Core: 70a52aa5dbe9b83befae82038451a7df9fd54c5a
   React-CoreModules: 052edef46117862e2570eb3a0f06d81c61d2c4b8
   React-cxxreact: c1dc71b30653cfb4770efdafcbdc0ad6d388baab
+  React-Fabric: 0ec9b07756404135d1294029b73f2013752729a5
+  React-graphics: 7e07268549123aab2dd0391a6fb2c4fc22a141b2
   React-jsi: 74341196d9547cbcbcfa4b3bbbf03af56431d5a1
   React-jsiexecutor: 06a9c77b56902ae7ffcdd7a4905f664adc5d237b
   React-jsinspector: 0ae35a37b20d5e031eb020a69cc5afdbd6406301
@@ -390,6 +711,7 @@ SPEC CHECKSUMS:
   React-RCTActionSheet: 3080b6e12e0e1a5b313c8c0050699b5c794a1b11
   React-RCTAnimation: 3f96f21a497ae7dabf4d2f150ee43f906aaf516f
   React-RCTBlob: 283b8e5025e7f954176bc48164f846909002f3ed
+  React-RCTFabric: 4e016c2e1c9b8c531658e971bcad937bc2924100
   React-RCTImage: 5088a484faac78f2d877e1b79125d3bb1ea94a16
   React-RCTLinking: 5e8fbb3e9a8bc2e4e3eb15b1eb8bda5fcac27b8c
   React-RCTNetwork: 38ec277217b1e841d5e6a1fa78da65b9212ccb28
@@ -400,6 +722,6 @@ SPEC CHECKSUMS:
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
 
-PODFILE CHECKSUM: cb43e05db9dbad12cd81af24ab8af9648eb62aac
+PODFILE CHECKSUM: 4d8e394ee37abd0ca2dd13bc81223c2e298126e9
 
 COCOAPODS: 1.12.1

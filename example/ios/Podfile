@@ -9,7 +9,8 @@ target 'RctWidgetExtensionExample' do
   use_react_native!(
     :path => config[:reactNativePath],
     # to enable hermes on iOS, change `false` to `true` and then install pods
-    :hermes_enabled => false
+    :hermes_enabled => false,
+    :fabric_enabled => true,
   )
 
   target 'RctWidgetExtensionExampleTests' do
@@ -17,13 +18,29 @@ target 'RctWidgetExtensionExample' do
     # Pods for testing
   end
 
+  target 'TodayWidgetExtension' do
+    inherit! :complete
+    # Pods for widget
+  end
+
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
   # use_flipper!()
+  
+  # use_modular_headers!
+  # pod 'React-graphics', :path => "../node_modules/react-native/ReactCommon/react/renderer/graphics"
+  # pod 'React-Fabric', :path => '../node_modules/react-native/ReactCommon/React-Fabric.podspec'
 
+  pod 'ReactCommon/turbomodule/samples', :path => "../node_modules/react-native/ReactCommon"
+  pod 'React-Fabric/components/rncore', :path => "../node_modules/react-native/ReactCommon"
   post_install do |installer|
     react_native_post_install(installer)
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'No'
+      end
+    end
   end
 end
