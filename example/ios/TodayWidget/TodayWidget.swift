@@ -41,27 +41,14 @@ struct SimpleEntry: TimelineEntry {
     let date: Date
 }
 
-struct RNTesterWidgetEntryView : View {
-  var entry: Provider.Entry
-
-  var entryViewManager: RSUIEntryViewManager
-
-  var body: some View {
-    entryViewManager.render()
-  }
-}
-
 struct TodayWidgetEntryView : View {
     var entry: Provider.Entry
     var entryViewManager: RSUIEntryViewManager
+  
 
     var body: some View {
       entryViewManager.render()
     }
-//    var body: some View {
-//        Text(entry.date, style: .time)
-//    }
-  
 }
 
 struct TodayWidget: Widget {

@@ -1,5 +1,6 @@
 
 import SwiftUI
+import WidgetKit
 
 public typealias ViewTag = Int
 public typealias ViewName = String
@@ -39,6 +40,11 @@ public class RSUIViewRegistry: RSUIViewRegistryObjC, ObservableObject {
   @objc
   public func viewDescriptor(forTag tag: ViewTag) -> RSUIViewDescriptor? {
     return descriptors[tag]
+  }
+    
+  @objc
+  public static func reloadAllWidgets(){
+    WidgetCenter.shared.reloadAllTimelines()
   }
 
   // MARK: View management
