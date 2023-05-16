@@ -8,6 +8,7 @@ import Image from './js/Image';
 import Animation from './js/Animation';
 import Blur from './js/Blur';
 import LinearGradient from './js/LinearGradient';
+import View from './js/View';
 
 export {
   Button,
@@ -20,4 +21,5 @@ export {
   Animation,
   Blur,
   LinearGradient,
+  View,
 };

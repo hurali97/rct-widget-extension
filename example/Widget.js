@@ -1,24 +1,34 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
-import { Rect, LinearGradient, Image } from 'rct-widget-extension';
+import { AppRegistry, StyleSheet } from 'react-native';
+import { LinearGradient, Image, View } from 'rct-widget-extension';
 
-const RCTWidget = () => {
+const RCTWidget = (props) => {
   return (
-    <Rect>
-      <LinearGradient
-        colors={['#A9D710', '#EF8552']}
-        from="topLeft"
-        to="bottomRight"
-      />
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+      {...props}
+    >
+      <View style={StyleSheet.absoluteFill}>
+        <LinearGradient
+          colors={['#A9D710', '#EF8552']}
+          from="topLeft"
+          to="bottomRight"
+        />
+      </View>
+
       <Image
-        style={{ width: 40, height: 40, marginTop: -20 }}
+        style={{ width: 40, height: 40 }}
         source={require('./src/assets/react-native.png')}
       />
       <Image
-        style={{ width: 40, height: 40, marginTop: 5 }}
+        style={{ width: 40, height: 40 }}
         source={require('./src/assets/swiftui.png')}
       />
-    </Rect>
+    </View>
   );
 };
 
