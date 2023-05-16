@@ -1,6 +1,14 @@
 import React from 'react';
-import { AppRegistry, StyleSheet } from 'react-native';
-import { LinearGradient, Image, View } from 'rct-widget-extension';
+/**
+ * We can re-use Image, Text, View from react-native.
+ * As far as I understand, their underlying names like
+ * RCTText, RCTImage, RCTView are registered in the
+ * ReactNativeViewConfigRegistry. So for example, in our
+ * RSUIBaseView we have defined "View" as the name, which is
+ * then subsituted with RCTView.
+ */
+import { AppRegistry, StyleSheet, Image, Text, View } from 'react-native';
+import { LinearGradient, Shadow } from 'rct-widget-extension';
 
 const RCTWidget = (props) => {
   return (
@@ -8,9 +16,7 @@ const RCTWidget = (props) => {
       style={{
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
       }}
-      {...props}
     >
       <View style={StyleSheet.absoluteFill}>
         <LinearGradient
@@ -20,14 +26,34 @@ const RCTWidget = (props) => {
         />
       </View>
 
-      <Image
-        style={{ width: 40, height: 40 }}
-        source={require('./src/assets/react-native.png')}
-      />
-      <Image
-        style={{ width: 40, height: 40 }}
-        source={require('./src/assets/swiftui.png')}
-      />
+      <Shadow radius={3} offsetX={3} offsetY={3} color="black">
+        <Text
+          style={{
+            color: 'black',
+            fontSize: 15,
+            fontWeight: 'bold',
+            textAlign: 'center',
+          }}
+        >
+          SwiftUI Widget
+        </Text>
+      </Shadow>
+
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Image
+          style={{ width: 40, height: 40 }}
+          source={require('./src/assets/react-native.png')}
+        />
+        <Image
+          style={{ width: 40, height: 40 }}
+          source={require('./src/assets/swiftui.png')}
+        />
+      </View>
     </View>
   );
 };
