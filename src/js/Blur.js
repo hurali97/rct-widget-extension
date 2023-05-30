@@ -17,8 +17,6 @@ const BlurNativeComponent = register('RSUIBlur', () => {
 
 export default class Blur extends React.PureComponent {
   render() {
-    return (
-      <BlurNativeComponent {...this.props} />
-    );
+    return <BlurNativeComponent {...this.props} />;
   }
 }

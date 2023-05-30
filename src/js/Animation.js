@@ -18,8 +18,6 @@ const AnimationNativeComponent = register('RSUIAnimation', () => {
 
 export default class Animation extends React.PureComponent {
   render() {
-    return (
-      <AnimationNativeComponent {...this.props} />
-    );
+    return <AnimationNativeComponent {...this.props} />;
   }
 }

@@ -21,8 +21,6 @@ export default class Image extends React.PureComponent {
     const source = resolveAssetSource(this.props.source) || {};
     const sources = Array.isArray(source) ? source : [source];
 
-    return (
-      <ImageNativeComponent {...this.props} source={sources} />
-    );
+    return <ImageNativeComponent {...this.props} source={sources} />;
   }
 }

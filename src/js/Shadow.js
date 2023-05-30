@@ -21,8 +21,6 @@ const ShadowNativeComponent = register('RSUIShadow', () => {
 
 export default class Shadow extends React.PureComponent {
   render() {
-    return (
-      <ShadowNativeComponent {...this.props} />
-    );
+    return <ShadowNativeComponent {...this.props} />;
   }
 }

@@ -22,9 +22,7 @@ export default class MaskView extends React.PureComponent {
 
     return (
       <MaskNativeComponent {...props}>
-        <View style={StyleSheet.absoluteFill}>
-          {shape}
-        </View>
+        <View style={StyleSheet.absoluteFill}>{shape}</View>
         {children}
       </MaskNativeComponent>
     );

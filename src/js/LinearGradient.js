@@ -11,7 +11,7 @@ const LinearGradientNativeComponent = register('RSUILinearGradient', () => {
     directEventTypes: {},
     validAttributes: {
       ...ReactNativeViewViewConfig.validAttributes,
-      colors: { process: colors => colors.map(processColor) },
+      colors: { process: (colors) => colors.map(processColor) },
       locations: true,
       from: true,
       to: true,
@@ -21,8 +21,6 @@ const LinearGradientNativeComponent = register('RSUILinearGradient', () => {
 
 export default class LinearGradient extends React.PureComponent {
   render() {
-    return (
-      <LinearGradientNativeComponent {...this.props} />
-    );
+    return <LinearGradientNativeComponent {...this.props} />;
   }
 }

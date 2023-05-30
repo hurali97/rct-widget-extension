@@ -21,16 +21,14 @@ export default class ScrollView extends React.PureComponent {
   nativeRef = React.createRef();
 
   scrollTo(options) {
-    dispatchCommand(
-      this.nativeRef.current,
-      'scrollTo',
-      [options.x, options.y, options.animated ?? true],
-    );
+    dispatchCommand(this.nativeRef.current, 'scrollTo', [
+      options.x,
+      options.y,
+      options.animated ?? true,
+    ]);
   }
 
   render() {
-    return (
-      <ScrollViewNativeComponent {...this.props} ref={this.nativeRef} />
-    );
+    return <ScrollViewNativeComponent {...this.props} ref={this.nativeRef} />;
   }
 }
