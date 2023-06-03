@@ -19,8 +19,7 @@ public class RSUIViewRegistry: RSUIViewRegistryObjC, ObservableObject {
     super.init()
 
     register(viewType: RSUIHostingView.self)
-      register(viewType: RSUIBaseView.self)
-      register(viewType: RSUIBaseView.self, name: "RSUIBaseView")
+    register(viewType: RSUIBaseView.self)
     register(viewType: RSUITextView.self)
     register(viewType: RSUIRawTextView.self)
     register(viewType: RSUIButton.self)
