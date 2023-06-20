@@ -24,9 +24,8 @@ Given that, I started working on laying out specs on how I want to achieve this.
  
  With errors gone, now I created a Widget Target in example app and added the bundler path to the `TodayWidget.Swift`. I also added a `Widget.js` file in the root of example app. Once that was done, I ran the example app and the widget was being shown with the JSX from `Widget.js`, having view hierarchy in SwiftUI 🎉 Also, the main example app, which has it's view hierarchy in UIKit was also working fine side by side. 🚀
  
- ![Screenshot 2023-05-15 at 11 22 03 PM](https://github.com/hurali97/rct-widget-extension/assets/47336142/53280ed7-245d-4da4-a180-2c3e8ba5fc76)
+![Screenshot 2023-05-15 at 11 22 03 PM](https://github.com/hurali97/rct-widget-extension/assets/47336142/65877228-13bc-4006-a077-fca58837ab24)
 
- 
  ## Component Details
  
  SM has following components in SwiftUI renderer:
