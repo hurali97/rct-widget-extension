@@ -7,7 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* RctWidgetExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RctWidgetExtension.mm */; };
+		610464F82A05179100B67657 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610464F72A05179100B67657 /* File.swift */; };
+		610465032A05199900B67657 /* RSUITextDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 610464FD2A05199900B67657 /* RSUITextDescriptor.cpp */; };
+		610465042A05199900B67657 /* RSUIParagraphDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 610464FF2A05199900B67657 /* RSUIParagraphDescriptor.cpp */; };
+		610465052A05199900B67657 /* RSUIRawTextDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 610465002A05199900B67657 /* RSUIRawTextDescriptor.cpp */; };
+		610465082A051B1500B67657 /* RSUIAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465072A051B1500B67657 /* RSUIAnimation.swift */; };
+		610465182A051B4600B67657 /* RSUIBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465092A051B4500B67657 /* RSUIBlur.swift */; };
+		610465192A051B4600B67657 /* RSUISwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104650A2A051B4500B67657 /* RSUISwitchView.swift */; };
+		6104651A2A051B4600B67657 /* RSUICircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104650B2A051B4500B67657 /* RSUICircle.swift */; };
+		6104651B2A051B4600B67657 /* RSUITextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104650C2A051B4500B67657 /* RSUITextInput.swift */; };
+		6104651C2A051B4600B67657 /* RSUIRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104650D2A051B4500B67657 /* RSUIRect.swift */; };
+		6104651D2A051B4600B67657 /* RSUIBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104650E2A051B4500B67657 /* RSUIBaseView.swift */; };
+		6104651E2A051B4600B67657 /* RSUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104650F2A051B4500B67657 /* RSUIImage.swift */; };
+		6104651F2A051B4600B67657 /* RSUIRawTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465102A051B4500B67657 /* RSUIRawTextView.swift */; };
+		610465202A051B4600B67657 /* RSUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465112A051B4500B67657 /* RSUIButton.swift */; };
+		610465212A051B4600B67657 /* RSUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465122A051B4500B67657 /* RSUIScrollView.swift */; };
+		610465222A051B4600B67657 /* RSUIMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465132A051B4500B67657 /* RSUIMask.swift */; };
+		610465232A051B4600B67657 /* RSUILinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465142A051B4500B67657 /* RSUILinearGradient.swift */; };
+		610465242A051B4600B67657 /* RSUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465152A051B4600B67657 /* RSUITextView.swift */; };
+		610465252A051B4600B67657 /* RSUIShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465162A051B4600B67657 /* RSUIShadow.swift */; };
+		610465262A051B4600B67657 /* RSUIHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465172A051B4600B67657 /* RSUIHostingView.swift */; };
+		610465292A051B7000B67657 /* RSUIProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465282A051B7000B67657 /* RSUIProps.swift */; };
+		610465362A051B8E00B67657 /* RSUIEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104652A2A051B8D00B67657 /* RSUIEventEmitter.swift */; };
+		610465372A051B8E00B67657 /* RSUILayoutMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104652B2A051B8D00B67657 /* RSUILayoutMetrics.swift */; };
+		610465382A051B8E00B67657 /* RSUIViewRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104652C2A051B8D00B67657 /* RSUIViewRegistry.swift */; };
+		610465392A051B8E00B67657 /* RSUIViewRegistryObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6104652D2A051B8D00B67657 /* RSUIViewRegistryObjC.mm */; };
+		6104653A2A051B8E00B67657 /* RSUIEventEmitterObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6104652E2A051B8D00B67657 /* RSUIEventEmitterObjC.mm */; };
+		6104653B2A051B8E00B67657 /* RSUIViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465312A051B8D00B67657 /* RSUIViewDescriptor.swift */; };
+		6104653C2A051B8E00B67657 /* RSUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465322A051B8D00B67657 /* RSUIState.swift */; };
+		6104653D2A051B8E00B67657 /* RSUIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610465332A051B8D00B67657 /* RSUIViewWrapper.swift */; };
+		6104653E2A051B8E00B67657 /* RSUIComponentViewFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 610465352A051B8E00B67657 /* RSUIComponentViewFactory.mm */; };
+		61DE76842A051D5000CE9A06 /* RSUIRuntimeEventBeat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE767C2A051D5000CE9A06 /* RSUIRuntimeEventBeat.mm */; };
+		61DE76852A051D5000CE9A06 /* RSUIScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE767D2A051D5000CE9A06 /* RSUIScheduler.mm */; };
+		61DE76862A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76812A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.mm */; };
+		61DE76872A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76822A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.mm */; };
+		61DE768B2A051D6E00CE9A06 /* RSUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76892A051D6E00CE9A06 /* RSUIView.swift */; };
+		61DE768C2A051D6E00CE9A06 /* RSUIAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE768A2A051D6E00CE9A06 /* RSUIAnyView.swift */; };
+		61DE76912A051D8A00CE9A06 /* RSUIMountingManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE768F2A051D8A00CE9A06 /* RSUIMountingManager.mm */; };
+		61DE76942A051DA700CE9A06 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76932A051DA700CE9A06 /* View.swift */; };
+		61DE769D2A051DBB00CE9A06 /* RSUIAppContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76962A051DBB00CE9A06 /* RSUIAppContext.mm */; };
+		61DE769E2A051DBB00CE9A06 /* RSUIRootView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76972A051DBB00CE9A06 /* RSUIRootView.mm */; };
+		61DE769F2A051DBB00CE9A06 /* RSUIEntryViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE76982A051DBB00CE9A06 /* RSUIEntryViewManager.swift */; };
+		61DE76A02A051DBB00CE9A06 /* RSUIEntryViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61DE769A2A051DBB00CE9A06 /* RSUIEntryViewManager.mm */; };
+		61E3F5602A051BF000D4D01F /* AlignContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F55F2A051BF000D4D01F /* AlignContainer.swift */; };
+		61E3F5642A051C1000D4D01F /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F5612A051C1000D4D01F /* Children.swift */; };
+		61E3F5652A051C1000D4D01F /* AlignHorizontally.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F5622A051C1000D4D01F /* AlignHorizontally.swift */; };
+		61E3F5662A051C1000D4D01F /* AlignVertically.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F5632A051C1000D4D01F /* AlignVertically.swift */; };
+		61E3F56B2A051C7E00D4D01F /* RSUIDynamicObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F56A2A051C7E00D4D01F /* RSUIDynamicObject.mm */; };
+		61E3F56E2A051CA400D4D01F /* RSUISurfaceContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F56D2A051CA400D4D01F /* RSUISurfaceContentView.swift */; };
+		61E3F5772A051CC000D4D01F /* RSUISurfaceRegistry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F56F2A051CC000D4D01F /* RSUISurfaceRegistry.mm */; };
+		61E3F5782A051CC000D4D01F /* RSUISurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F5722A051CC000D4D01F /* RSUISurface.mm */; };
+		61E3F5792A051CC000D4D01F /* RSUISurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F5752A051CC000D4D01F /* RSUISurfaceView.m */; };
+		61E3F57A2A051CC000D4D01F /* RSUISurfacePresenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F5762A051CC000D4D01F /* RSUISurfacePresenter.mm */; };
+		61E3F57D2A051CEB00D4D01F /* ScrollViewReaderShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3F57C2A051CEB00D4D01F /* ScrollViewReaderShim.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +75,84 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRctWidgetExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRctWidgetExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RctWidgetExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RctWidgetExtension.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RctWidgetExtension.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RctWidgetExtension.mm; sourceTree = "<group>"; };
+		610464F62A05179100B67657 /* RctWidgetExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RctWidgetExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		610464F72A05179100B67657 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = native/File.swift; sourceTree = "<group>"; };
+		610464FA2A0517FA00B67657 /* RSUIComponentDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSUIComponentDescriptor.h; sourceTree = "<group>"; };
+		610464FD2A05199900B67657 /* RSUITextDescriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RSUITextDescriptor.cpp; sourceTree = "<group>"; };
+		610464FE2A05199900B67657 /* RSUITextDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUITextDescriptor.h; sourceTree = "<group>"; };
+		610464FF2A05199900B67657 /* RSUIParagraphDescriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RSUIParagraphDescriptor.cpp; sourceTree = "<group>"; };
+		610465002A05199900B67657 /* RSUIRawTextDescriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RSUIRawTextDescriptor.cpp; sourceTree = "<group>"; };
+		610465012A05199900B67657 /* RSUIParagraphDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIParagraphDescriptor.h; sourceTree = "<group>"; };
+		610465022A05199900B67657 /* RSUIRawTextDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIRawTextDescriptor.h; sourceTree = "<group>"; };
+		610465072A051B1500B67657 /* RSUIAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSUIAnimation.swift; sourceTree = "<group>"; };
+		610465092A051B4500B67657 /* RSUIBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIBlur.swift; sourceTree = "<group>"; };
+		6104650A2A051B4500B67657 /* RSUISwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUISwitchView.swift; sourceTree = "<group>"; };
+		6104650B2A051B4500B67657 /* RSUICircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUICircle.swift; sourceTree = "<group>"; };
+		6104650C2A051B4500B67657 /* RSUITextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUITextInput.swift; sourceTree = "<group>"; };
+		6104650D2A051B4500B67657 /* RSUIRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIRect.swift; sourceTree = "<group>"; };
+		6104650E2A051B4500B67657 /* RSUIBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIBaseView.swift; sourceTree = "<group>"; };
+		6104650F2A051B4500B67657 /* RSUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIImage.swift; sourceTree = "<group>"; };
+		610465102A051B4500B67657 /* RSUIRawTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIRawTextView.swift; sourceTree = "<group>"; };
+		610465112A051B4500B67657 /* RSUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIButton.swift; sourceTree = "<group>"; };
+		610465122A051B4500B67657 /* RSUIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIScrollView.swift; sourceTree = "<group>"; };
+		610465132A051B4500B67657 /* RSUIMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIMask.swift; sourceTree = "<group>"; };
+		610465142A051B4500B67657 /* RSUILinearGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUILinearGradient.swift; sourceTree = "<group>"; };
+		610465152A051B4600B67657 /* RSUITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUITextView.swift; sourceTree = "<group>"; };
+		610465162A051B4600B67657 /* RSUIShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIShadow.swift; sourceTree = "<group>"; };
+		610465172A051B4600B67657 /* RSUIHostingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIHostingView.swift; sourceTree = "<group>"; };
+		610465282A051B7000B67657 /* RSUIProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSUIProps.swift; sourceTree = "<group>"; };
+		6104652A2A051B8D00B67657 /* RSUIEventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIEventEmitter.swift; sourceTree = "<group>"; };
+		6104652B2A051B8D00B67657 /* RSUILayoutMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUILayoutMetrics.swift; sourceTree = "<group>"; };
+		6104652C2A051B8D00B67657 /* RSUIViewRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIViewRegistry.swift; sourceTree = "<group>"; };
+		6104652D2A051B8D00B67657 /* RSUIViewRegistryObjC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIViewRegistryObjC.mm; sourceTree = "<group>"; };
+		6104652E2A051B8D00B67657 /* RSUIEventEmitterObjC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIEventEmitterObjC.mm; sourceTree = "<group>"; };
+		6104652F2A051B8D00B67657 /* RSUIEventEmitterObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIEventEmitterObjC.h; sourceTree = "<group>"; };
+		610465302A051B8D00B67657 /* RSUIComponentViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIComponentViewFactory.h; sourceTree = "<group>"; };
+		610465312A051B8D00B67657 /* RSUIViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIViewDescriptor.swift; sourceTree = "<group>"; };
+		610465322A051B8D00B67657 /* RSUIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIState.swift; sourceTree = "<group>"; };
+		610465332A051B8D00B67657 /* RSUIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIViewWrapper.swift; sourceTree = "<group>"; };
+		610465342A051B8D00B67657 /* RSUIViewRegistryObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIViewRegistryObjC.h; sourceTree = "<group>"; };
+		610465352A051B8E00B67657 /* RSUIComponentViewFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIComponentViewFactory.mm; sourceTree = "<group>"; };
+		617084CD2A05128400EA2147 /* libRctWidgetExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRctWidgetExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		61DE767C2A051D5000CE9A06 /* RSUIRuntimeEventBeat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIRuntimeEventBeat.mm; sourceTree = "<group>"; };
+		61DE767D2A051D5000CE9A06 /* RSUIScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIScheduler.mm; sourceTree = "<group>"; };
+		61DE767E2A051D5000CE9A06 /* RSUIRuntimeEventBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIRuntimeEventBeat.h; sourceTree = "<group>"; };
+		61DE767F2A051D5000CE9A06 /* RSUIScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIScheduler.h; sourceTree = "<group>"; };
+		61DE76802A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIPlatformRunLoopObserver.h; sourceTree = "<group>"; };
+		61DE76812A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIPlatformRunLoopObserver.mm; sourceTree = "<group>"; };
+		61DE76822A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIMainRunLoopEventBeat.mm; sourceTree = "<group>"; };
+		61DE76832A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIMainRunLoopEventBeat.h; sourceTree = "<group>"; };
+		61DE76892A051D6E00CE9A06 /* RSUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIView.swift; sourceTree = "<group>"; };
+		61DE768A2A051D6E00CE9A06 /* RSUIAnyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIAnyView.swift; sourceTree = "<group>"; };
+		61DE768E2A051D8A00CE9A06 /* RSUIMountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIMountingManager.h; sourceTree = "<group>"; };
+		61DE768F2A051D8A00CE9A06 /* RSUIMountingManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIMountingManager.mm; sourceTree = "<group>"; };
+		61DE76902A051D8A00CE9A06 /* RSUIMountingManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIMountingManagerDelegate.h; sourceTree = "<group>"; };
+		61DE76932A051DA700CE9A06 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		61DE76962A051DBB00CE9A06 /* RSUIAppContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIAppContext.mm; sourceTree = "<group>"; };
+		61DE76972A051DBB00CE9A06 /* RSUIRootView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIRootView.mm; sourceTree = "<group>"; };
+		61DE76982A051DBB00CE9A06 /* RSUIEntryViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUIEntryViewManager.swift; sourceTree = "<group>"; };
+		61DE76992A051DBB00CE9A06 /* RSUIAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIAppContext.h; sourceTree = "<group>"; };
+		61DE769A2A051DBB00CE9A06 /* RSUIEntryViewManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIEntryViewManager.mm; sourceTree = "<group>"; };
+		61DE769B2A051DBB00CE9A06 /* RSUIEntryViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIEntryViewManager.h; sourceTree = "<group>"; };
+		61DE769C2A051DBB00CE9A06 /* RSUIRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIRootView.h; sourceTree = "<group>"; };
+		61DE76A12A051DDF00CE9A06 /* RctWidgetExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RctWidgetExtension.h; sourceTree = "<group>"; };
+		61E3F55F2A051BF000D4D01F /* AlignContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignContainer.swift; sourceTree = "<group>"; };
+		61E3F5612A051C1000D4D01F /* Children.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
+		61E3F5622A051C1000D4D01F /* AlignHorizontally.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignHorizontally.swift; sourceTree = "<group>"; };
+		61E3F5632A051C1000D4D01F /* AlignVertically.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignVertically.swift; sourceTree = "<group>"; };
+		61E3F5682A051C4200D4D01F /* RSUIConversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSUIConversions.h; sourceTree = "<group>"; };
+		61E3F5692A051C7E00D4D01F /* RSUIDynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUIDynamicObject.h; sourceTree = "<group>"; };
+		61E3F56A2A051C7E00D4D01F /* RSUIDynamicObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUIDynamicObject.mm; sourceTree = "<group>"; };
+		61E3F56D2A051CA400D4D01F /* RSUISurfaceContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSUISurfaceContentView.swift; sourceTree = "<group>"; };
+		61E3F56F2A051CC000D4D01F /* RSUISurfaceRegistry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUISurfaceRegistry.mm; sourceTree = "<group>"; };
+		61E3F5702A051CC000D4D01F /* RSUISurfacePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUISurfacePresenter.h; sourceTree = "<group>"; };
+		61E3F5712A051CC000D4D01F /* RSUISurfaceRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUISurfaceRegistry.h; sourceTree = "<group>"; };
+		61E3F5722A051CC000D4D01F /* RSUISurface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUISurface.mm; sourceTree = "<group>"; };
+		61E3F5732A051CC000D4D01F /* RSUISurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUISurfaceView.h; sourceTree = "<group>"; };
+		61E3F5742A051CC000D4D01F /* RSUISurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUISurface.h; sourceTree = "<group>"; };
+		61E3F5752A051CC000D4D01F /* RSUISurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUISurfaceView.m; sourceTree = "<group>"; };
+		61E3F5762A051CC000D4D01F /* RSUISurfacePresenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RSUISurfacePresenter.mm; sourceTree = "<group>"; };
+		61E3F57C2A051CEB00D4D01F /* ScrollViewReaderShim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewReaderShim.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,21 +166,184 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				134814201AA4EA6300B7C361 /* libRctWidgetExtension.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* RctWidgetExtension.h */,
-				B3E7B5891CC2AC0600A0062D /* RctWidgetExtension.mm */,
-				134814211AA4EA7D00B7C361 /* Products */,
+				61DE76A12A051DDF00CE9A06 /* RctWidgetExtension.h */,
+				61DE76952A051DAC00CE9A06 /* Core */,
+				61DE76922A051D9500CE9A06 /* Extensions */,
+				61DE768D2A051D7800CE9A06 /* Mounting */,
+				61DE76882A051D5B00CE9A06 /* Protocols */,
+				61DE767B2A051D3B00CE9A06 /* Scheduler */,
+				61E3F57B2A051CD200D4D01F /* Shims */,
+				61E3F56C2A051C8A00D4D01F /* Surface */,
+				61E3F5672A051C1D00D4D01F /* Utils */,
+				61E3F55E2A051BDD00D4D01F /* ViewHelpers */,
+				610465272A051B5A00B67657 /* ViewRegistry */,
+				610465062A051ADF00B67657 /* Views */,
+				610464F92A0517D600B67657 /* ComponentDescriptors */,
+				610464F72A05179100B67657 /* File.swift */,
+				617084CD2A05128400EA2147 /* libRctWidgetExtension.a */,
+				610464F62A05179100B67657 /* RctWidgetExtension-Bridging-Header.h */,
 			);
+			sourceTree = "<group>";
+		};
+		610464F92A0517D600B67657 /* ComponentDescriptors */ = {
+			isa = PBXGroup;
+			children = (
+				610464FF2A05199900B67657 /* RSUIParagraphDescriptor.cpp */,
+				610465012A05199900B67657 /* RSUIParagraphDescriptor.h */,
+				610465002A05199900B67657 /* RSUIRawTextDescriptor.cpp */,
+				610465022A05199900B67657 /* RSUIRawTextDescriptor.h */,
+				610464FD2A05199900B67657 /* RSUITextDescriptor.cpp */,
+				610464FE2A05199900B67657 /* RSUITextDescriptor.h */,
+				610464FA2A0517FA00B67657 /* RSUIComponentDescriptor.h */,
+			);
+			path = ComponentDescriptors;
+			sourceTree = "<group>";
+		};
+		610465062A051ADF00B67657 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6104650E2A051B4500B67657 /* RSUIBaseView.swift */,
+				610465092A051B4500B67657 /* RSUIBlur.swift */,
+				610465112A051B4500B67657 /* RSUIButton.swift */,
+				6104650B2A051B4500B67657 /* RSUICircle.swift */,
+				610465172A051B4600B67657 /* RSUIHostingView.swift */,
+				6104650F2A051B4500B67657 /* RSUIImage.swift */,
+				610465142A051B4500B67657 /* RSUILinearGradient.swift */,
+				610465132A051B4500B67657 /* RSUIMask.swift */,
+				610465102A051B4500B67657 /* RSUIRawTextView.swift */,
+				6104650D2A051B4500B67657 /* RSUIRect.swift */,
+				610465122A051B4500B67657 /* RSUIScrollView.swift */,
+				610465162A051B4600B67657 /* RSUIShadow.swift */,
+				6104650A2A051B4500B67657 /* RSUISwitchView.swift */,
+				6104650C2A051B4500B67657 /* RSUITextInput.swift */,
+				610465152A051B4600B67657 /* RSUITextView.swift */,
+				610465072A051B1500B67657 /* RSUIAnimation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		610465272A051B5A00B67657 /* ViewRegistry */ = {
+			isa = PBXGroup;
+			children = (
+				610465302A051B8D00B67657 /* RSUIComponentViewFactory.h */,
+				610465352A051B8E00B67657 /* RSUIComponentViewFactory.mm */,
+				6104652A2A051B8D00B67657 /* RSUIEventEmitter.swift */,
+				6104652F2A051B8D00B67657 /* RSUIEventEmitterObjC.h */,
+				6104652E2A051B8D00B67657 /* RSUIEventEmitterObjC.mm */,
+				6104652B2A051B8D00B67657 /* RSUILayoutMetrics.swift */,
+				610465322A051B8D00B67657 /* RSUIState.swift */,
+				610465312A051B8D00B67657 /* RSUIViewDescriptor.swift */,
+				6104652C2A051B8D00B67657 /* RSUIViewRegistry.swift */,
+				610465342A051B8D00B67657 /* RSUIViewRegistryObjC.h */,
+				6104652D2A051B8D00B67657 /* RSUIViewRegistryObjC.mm */,
+				610465332A051B8D00B67657 /* RSUIViewWrapper.swift */,
+				610465282A051B7000B67657 /* RSUIProps.swift */,
+			);
+			path = ViewRegistry;
+			sourceTree = "<group>";
+		};
+		61DE767B2A051D3B00CE9A06 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				61DE76832A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.h */,
+				61DE76822A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.mm */,
+				61DE76802A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.h */,
+				61DE76812A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.mm */,
+				61DE767E2A051D5000CE9A06 /* RSUIRuntimeEventBeat.h */,
+				61DE767C2A051D5000CE9A06 /* RSUIRuntimeEventBeat.mm */,
+				61DE767F2A051D5000CE9A06 /* RSUIScheduler.h */,
+				61DE767D2A051D5000CE9A06 /* RSUIScheduler.mm */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		61DE76882A051D5B00CE9A06 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				61DE768A2A051D6E00CE9A06 /* RSUIAnyView.swift */,
+				61DE76892A051D6E00CE9A06 /* RSUIView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		61DE768D2A051D7800CE9A06 /* Mounting */ = {
+			isa = PBXGroup;
+			children = (
+				61DE768E2A051D8A00CE9A06 /* RSUIMountingManager.h */,
+				61DE768F2A051D8A00CE9A06 /* RSUIMountingManager.mm */,
+				61DE76902A051D8A00CE9A06 /* RSUIMountingManagerDelegate.h */,
+			);
+			path = Mounting;
+			sourceTree = "<group>";
+		};
+		61DE76922A051D9500CE9A06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61DE76932A051DA700CE9A06 /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		61DE76952A051DAC00CE9A06 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				61DE76992A051DBB00CE9A06 /* RSUIAppContext.h */,
+				61DE76962A051DBB00CE9A06 /* RSUIAppContext.mm */,
+				61DE769B2A051DBB00CE9A06 /* RSUIEntryViewManager.h */,
+				61DE769A2A051DBB00CE9A06 /* RSUIEntryViewManager.mm */,
+				61DE76982A051DBB00CE9A06 /* RSUIEntryViewManager.swift */,
+				61DE769C2A051DBB00CE9A06 /* RSUIRootView.h */,
+				61DE76972A051DBB00CE9A06 /* RSUIRootView.mm */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		61E3F55E2A051BDD00D4D01F /* ViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				61E3F5622A051C1000D4D01F /* AlignHorizontally.swift */,
+				61E3F5632A051C1000D4D01F /* AlignVertically.swift */,
+				61E3F5612A051C1000D4D01F /* Children.swift */,
+				61E3F55F2A051BF000D4D01F /* AlignContainer.swift */,
+			);
+			path = ViewHelpers;
+			sourceTree = "<group>";
+		};
+		61E3F5672A051C1D00D4D01F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61E3F5692A051C7E00D4D01F /* RSUIDynamicObject.h */,
+				61E3F56A2A051C7E00D4D01F /* RSUIDynamicObject.mm */,
+				61E3F5682A051C4200D4D01F /* RSUIConversions.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61E3F56C2A051C8A00D4D01F /* Surface */ = {
+			isa = PBXGroup;
+			children = (
+				61E3F5742A051CC000D4D01F /* RSUISurface.h */,
+				61E3F5722A051CC000D4D01F /* RSUISurface.mm */,
+				61E3F5702A051CC000D4D01F /* RSUISurfacePresenter.h */,
+				61E3F5762A051CC000D4D01F /* RSUISurfacePresenter.mm */,
+				61E3F5712A051CC000D4D01F /* RSUISurfaceRegistry.h */,
+				61E3F56F2A051CC000D4D01F /* RSUISurfaceRegistry.mm */,
+				61E3F5732A051CC000D4D01F /* RSUISurfaceView.h */,
+				61E3F5752A051CC000D4D01F /* RSUISurfaceView.m */,
+				61E3F56D2A051CA400D4D01F /* RSUISurfaceContentView.swift */,
+			);
+			path = Surface;
+			sourceTree = "<group>";
+		};
+		61E3F57B2A051CD200D4D01F /* Shims */ = {
+			isa = PBXGroup;
+			children = (
+				61E3F57C2A051CEB00D4D01F /* ScrollViewReaderShim.swift */,
+			);
+			path = Shims;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,7 +363,7 @@
 			);
 			name = RctWidgetExtension;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRctWidgetExtension.a */;
+			productReference = 617084CD2A05128400EA2147 /* libRctWidgetExtension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -87,6 +377,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -113,7 +404,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RctWidgetExtension.mm in Sources */,
+				61DE76852A051D5000CE9A06 /* RSUIScheduler.mm in Sources */,
+				6104653A2A051B8E00B67657 /* RSUIEventEmitterObjC.mm in Sources */,
+				610465232A051B4600B67657 /* RSUILinearGradient.swift in Sources */,
+				6104651E2A051B4600B67657 /* RSUIImage.swift in Sources */,
+				61E3F57A2A051CC000D4D01F /* RSUISurfacePresenter.mm in Sources */,
+				6104651A2A051B4600B67657 /* RSUICircle.swift in Sources */,
+				610465292A051B7000B67657 /* RSUIProps.swift in Sources */,
+				6104651D2A051B4600B67657 /* RSUIBaseView.swift in Sources */,
+				61E3F5662A051C1000D4D01F /* AlignVertically.swift in Sources */,
+				610465032A05199900B67657 /* RSUITextDescriptor.cpp in Sources */,
+				610465212A051B4600B67657 /* RSUIScrollView.swift in Sources */,
+				610465262A051B4600B67657 /* RSUIHostingView.swift in Sources */,
+				61DE76942A051DA700CE9A06 /* View.swift in Sources */,
+				610465252A051B4600B67657 /* RSUIShadow.swift in Sources */,
+				6104653B2A051B8E00B67657 /* RSUIViewDescriptor.swift in Sources */,
+				610465372A051B8E00B67657 /* RSUILayoutMetrics.swift in Sources */,
+				610465392A051B8E00B67657 /* RSUIViewRegistryObjC.mm in Sources */,
+				610465182A051B4600B67657 /* RSUIBlur.swift in Sources */,
+				61DE768C2A051D6E00CE9A06 /* RSUIAnyView.swift in Sources */,
+				61DE768B2A051D6E00CE9A06 /* RSUIView.swift in Sources */,
+				610465362A051B8E00B67657 /* RSUIEventEmitter.swift in Sources */,
+				6104651B2A051B4600B67657 /* RSUITextInput.swift in Sources */,
+				610465202A051B4600B67657 /* RSUIButton.swift in Sources */,
+				610465222A051B4600B67657 /* RSUIMask.swift in Sources */,
+				61E3F5642A051C1000D4D01F /* Children.swift in Sources */,
+				61E3F5652A051C1000D4D01F /* AlignHorizontally.swift in Sources */,
+				61E3F5602A051BF000D4D01F /* AlignContainer.swift in Sources */,
+				61E3F5772A051CC000D4D01F /* RSUISurfaceRegistry.mm in Sources */,
+				61DE76862A051D5000CE9A06 /* RSUIPlatformRunLoopObserver.mm in Sources */,
+				6104653C2A051B8E00B67657 /* RSUIState.swift in Sources */,
+				61DE76A02A051DBB00CE9A06 /* RSUIEntryViewManager.mm in Sources */,
+				61E3F57D2A051CEB00D4D01F /* ScrollViewReaderShim.swift in Sources */,
+				61DE76842A051D5000CE9A06 /* RSUIRuntimeEventBeat.mm in Sources */,
+				61DE769F2A051DBB00CE9A06 /* RSUIEntryViewManager.swift in Sources */,
+				61DE769E2A051DBB00CE9A06 /* RSUIRootView.mm in Sources */,
+				6104653D2A051B8E00B67657 /* RSUIViewWrapper.swift in Sources */,
+				6104651F2A051B4600B67657 /* RSUIRawTextView.swift in Sources */,
+				610465382A051B8E00B67657 /* RSUIViewRegistry.swift in Sources */,
+				610465042A05199900B67657 /* RSUIParagraphDescriptor.cpp in Sources */,
+				610465242A051B4600B67657 /* RSUITextView.swift in Sources */,
+				6104653E2A051B8E00B67657 /* RSUIComponentViewFactory.mm in Sources */,
+				61E3F5782A051CC000D4D01F /* RSUISurface.mm in Sources */,
+				610464F82A05179100B67657 /* File.swift in Sources */,
+				6104651C2A051B4600B67657 /* RSUIRect.swift in Sources */,
+				61E3F5792A051CC000D4D01F /* RSUISurfaceView.m in Sources */,
+				610465052A05199900B67657 /* RSUIRawTextDescriptor.cpp in Sources */,
+				61E3F56B2A051C7E00D4D01F /* RSUIDynamicObject.mm in Sources */,
+				61E3F56E2A051CA400D4D01F /* RSUISurfaceContentView.swift in Sources */,
+				610465082A051B1500B67657 /* RSUIAnimation.swift in Sources */,
+				61DE769D2A051DBB00CE9A06 /* RSUIAppContext.mm in Sources */,
+				61DE76912A051D8A00CE9A06 /* RSUIMountingManager.mm in Sources */,
+				610465192A051B4600B67657 /* RSUISwitchView.swift in Sources */,
+				61DE76872A051D5000CE9A06 /* RSUIMainRunLoopEventBeat.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +561,7 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -228,12 +572,16 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RctWidgetExtension;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RctWidgetExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -244,6 +592,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RctWidgetExtension;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RctWidgetExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
