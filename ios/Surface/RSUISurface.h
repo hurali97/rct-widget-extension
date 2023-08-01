@@ -2,7 +2,10 @@
 #import <React/RCTSurfaceProtocol.h>
 #import <React/RCTSurfaceView.h>
 #import <React/RCTSurface.h>
-//#import <react/renderer/scheduler/SurfaceHandler.h>
+
+#ifdef __cplusplus
+#import <react/renderer/scheduler/SurfaceHandler.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -81,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RSUISurface (Internal)
 
-//- (facebook::react::SurfaceHandler const &)surfaceHandler;
+- (facebook::react::SurfaceHandler const &)surfaceHandler;
 
 @end
 

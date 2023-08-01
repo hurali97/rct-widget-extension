@@ -403,14 +403,14 @@ static BackgroundExecutor RCTGetBackgroundExecutor()
     [mountingManager.viewRegistry create:(int)surface.rootTag name:@"RootView"];
   });
 
-//  [scheduler registerSurface:surface.surfaceHandler];
+  [scheduler registerSurface:surface.surfaceHandler];
   [surface start];
 }
 
 - (void)stopSurface:(RSUISurface *)surface scheduler:(RSUIScheduler *)scheduler
 {
     [surface stop];
-//    [scheduler unregisterSurface:surface.surfaceHandler];
+    [scheduler unregisterSurface:surface.surfaceHandler];
 }
 
 - (void)startAllSurfacesWithScheduler:(RSUIScheduler *)scheduler

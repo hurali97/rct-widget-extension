@@ -96,10 +96,10 @@
 
   // We need to register a root view component here synchronously because right after
   // we start a surface, it can initiate an update that can query the root component.
-//  RCTUnsafeExecuteOnMainQueueSync(^{
-//    [self->_surfacePresenter.mountingManager attachSurfaceToView:self.view
-//                                                       surfaceId:self->_surfaceHandler->getSurfaceId()];
-//  });
+  RCTUnsafeExecuteOnMainQueueSync(^{
+    [self->_surfacePresenter.mountingManager attachSurfaceToView:self.view
+                                                       surfaceId:self->_surfaceHandler->getSurfaceId()];
+  });
   [_surfacePresenter registerSurface:self];
   _surfaceHandler->start();
   [self _propagateStageChange];
@@ -119,10 +119,10 @@
   [self _propagateStageChange];
 
   [_surfacePresenter unregisterSurface:self];
-//  RCTExecuteOnMainQueue(^{
-//    [self->_surfacePresenter.mountingManager detachSurfaceFromView:self.view
-//                                                         surfaceId:self->_surfaceHandler->getSurfaceId()];
-//  });
+  RCTExecuteOnMainQueue(^{
+    [self->_surfacePresenter.mountingManager detachSurfaceFromView:self.view
+                                                         surfaceId:self->_surfaceHandler->getSurfaceId()];
+  });
 }
 
 #pragma mark - Stage management
