@@ -14,6 +14,11 @@
 
 #import <React/CoreModulesPlugins.h>
 #import <ReactCommon/SampleTurboCxxModule.h>
+#import <react/renderer/runtimescheduler/RuntimeScheduler.h>
+#import <React/RCTRuntimeExecutorFromBridge.h>
+#import <react/renderer/runtimescheduler/RuntimeSchedulerCallInvoker.h>
+#import <React/RCTJSIExecutorRuntimeInstaller.h>
+#import <react/renderer/runtimescheduler/RuntimeSchedulerBinding.h>
 
 #import "RSUIEntryViewManager.h"
 
@@ -33,7 +38,9 @@ std::shared_ptr<facebook::react::TurboModule> RSUITurboModuleProvider(const std:
 
 #pragma mark - Entry view manager
 
-@interface RSUIEntryViewManagerObjC() <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate>
+@interface RSUIEntryViewManagerObjC() <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
+    std::shared_ptr<facebook::react::RuntimeScheduler> _runtimeScheduler;
+}
 @end
 
 @implementation RSUIEntryViewManagerObjC {
@@ -58,6 +65,11 @@ std::shared_ptr<facebook::react::TurboModule> RSUITurboModuleProvider(const std:
   return _appContext.surface.rootTag;
 }
 
+- (BOOL)runtimeSchedulerEnabled
+{
+  return YES;
+}
+
 # pragma mark - RCTCxxBridgeDelegate
 
 - (NSURL *)sourceURLForBridge:(__unused RCTBridge *)bridge
@@ -67,32 +79,42 @@ std::shared_ptr<facebook::react::TurboModule> RSUITurboModuleProvider(const std:
 
 - (std::unique_ptr<facebook::react::JSExecutorFactory>)jsExecutorFactoryForBridge:(RCTBridge *)bridge
 {
-  _turboModuleManager = [[RCTTurboModuleManager alloc] initWithBridge:bridge
-                                                             delegate:self
-                                                            jsInvoker:bridge.jsCallInvoker];
-  [bridge setRCTTurboModuleRegistry:_turboModuleManager];
+  _runtimeScheduler = std::make_shared<facebook::react::RuntimeScheduler>(RCTRuntimeExecutorFromBridge(bridge));
+  std::shared_ptr<facebook::react::CallInvoker> callInvoker =
+      std::make_shared<facebook::react::RuntimeSchedulerCallInvoker>(_runtimeScheduler);
+  _turboModuleManager = [[RCTTurboModuleManager alloc] initWithBridge:bridge delegate:self jsInvoker:callInvoker];
 
-#if RCT_DEV
-  /**
-   * Eagerly initialize RCTDevMenu so CMD + d, CMD + i, and CMD + r work.
-   * This is a stop gap until we have a system to eagerly init Turbo Modules.
-   */
-  [_turboModuleManager moduleForName:"RCTDevMenu"];
-#endif
+    // Necessary to allow NativeModules to lookup TurboModules
+    [bridge setRCTTurboModuleRegistry:_turboModuleManager];
 
-  __weak __typeof(self) weakSelf = self;
-  return std::make_unique<facebook::react::HermesExecutorFactory>([weakSelf, bridge](facebook::jsi::Runtime &runtime) {
-    if (!bridge) {
-      return;
+  #if RCT_DEV
+    if (!RCTTurboModuleEagerInitEnabled()) {
+      /**
+       * Instantiating DevMenu has the side-effect of registering
+       * shortcuts for CMD + d, CMD + i,  and CMD + n via RCTDevMenu.
+       * Therefore, when TurboModules are enabled, we must manually create this
+       * NativeModule.
+       */
+      [_turboModuleManager moduleForName:"RCTDevMenu"];
     }
-    __typeof(self) strongSelf = weakSelf;
-    if (strongSelf) {
-      facebook::react::RuntimeExecutor syncRuntimeExecutor = [&](std::function<void(facebook::jsi::Runtime &runtime_)> &&callback) {
-        callback(runtime);
-      };
-      [strongSelf->_turboModuleManager installJSBindingWithRuntimeExecutor:syncRuntimeExecutor];
-    }
-  });
+  #endif
+    
+    RCTTurboModuleManager *turboModuleManager = _turboModuleManager;
+    std::shared_ptr<facebook::react::RuntimeScheduler> const &runtimeScheduler = _runtimeScheduler;
+    
+  return std::make_unique<facebook::react::HermesExecutorFactory>(
+    facebook::react::RCTJSIExecutorRuntimeInstaller(
+        [turboModuleManager, bridge, runtimeScheduler](facebook::jsi::Runtime &runtime) {
+          if (!bridge || !turboModuleManager) {
+            return;
+          }
+          if (runtimeScheduler) {
+            facebook::react::RuntimeSchedulerBinding::createAndInstallIfNeeded(runtime, runtimeScheduler);
+          }
+          facebook::react::RuntimeExecutor syncRuntimeExecutor =
+              [&](std::function<void(facebook::jsi::Runtime & runtime_)> &&callback) { callback(runtime); };
+          [turboModuleManager installJSBindingWithRuntimeExecutor:syncRuntimeExecutor];
+        }));
 }
 
 #pragma mark RCTTurboModuleManagerDelegate
@@ -136,6 +158,18 @@ std::shared_ptr<facebook::react::TurboModule> RSUITurboModuleProvider(const std:
   }
   // No custom initializer here.
   return [moduleClass new];
+}
+
+#pragma mark - New Arch Enabled settings
+
+- (BOOL)turboModuleEnabled
+{
+  return YES;
+}
+
+- (BOOL)fabricEnabled
+{
+  return YES;
 }
 
 @end

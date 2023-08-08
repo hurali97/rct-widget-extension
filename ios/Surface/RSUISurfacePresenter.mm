@@ -404,7 +404,6 @@ static BackgroundExecutor RCTGetBackgroundExecutor()
   });
 
   [scheduler registerSurface:surface.surfaceHandler];
-  [surface start];
 }
 
 - (void)stopSurface:(RSUISurface *)surface scheduler:(RSUIScheduler *)scheduler
@@ -418,6 +417,7 @@ static BackgroundExecutor RCTGetBackgroundExecutor()
   [_surfaceRegistry enumerateWithBlock:^(NSEnumerator<RSUISurface *> *enumerator) {
     for (RSUISurface *surface in enumerator) {
       [self startSurface:surface scheduler:scheduler];
+      [surface start];
     }
   }];
 }

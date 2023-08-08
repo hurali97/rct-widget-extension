@@ -274,4 +274,27 @@ using namespace facebook::react;
   viewDescriptor.props = [viewDescriptor.props mergeWith:[RSUIComponentViewFactory dynamicPropsValueForProps:newProps]];
 }
 
+- (void)attachSurfaceToView:(UIView *)view surfaceId:(SurfaceId)surfaceId
+{
+//  RCTAssertMainQueue();
+//
+//  RCTAssert(view.subviews.count == 0, @"The view must not have any subviews.");
+//
+//  RCTComponentViewDescriptor rootViewDescriptor =
+//      [_componentViewRegistry dequeueComponentViewWithComponentHandle:RootShadowNode::Handle() tag:surfaceId];
+//  [view addSubview:rootViewDescriptor.view];
+}
+
+- (void)detachSurfaceFromView:(UIView *)view surfaceId:(SurfaceId)surfaceId
+{
+//  RCTAssertMainQueue();
+//  RCTComponentViewDescriptor rootViewDescriptor = [_componentViewRegistry componentViewDescriptorWithTag:surfaceId];
+//
+//  [rootViewDescriptor.view removeFromSuperview];
+//
+//  [_componentViewRegistry enqueueComponentViewWithComponentHandle:RootShadowNode::Handle()
+//                                                              tag:surfaceId
+//                                          componentViewDescriptor:rootViewDescriptor];
+}
+
 @end

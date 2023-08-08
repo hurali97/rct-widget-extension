@@ -7,8 +7,11 @@
 
 import WidgetKit
 import SwiftUI
+import RctWidgetExtension
 
 struct Provider: TimelineProvider {
+    let entryViewManager: RSUIEntryViewManager
+
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
@@ -40,27 +43,34 @@ struct SimpleEntry: TimelineEntry {
 
 struct TodayWidgetEntryView : View {
     var entry: Provider.Entry
+    var entryViewManager: RSUIEntryViewManager
+  
 
     var body: some View {
-        Text(entry.date, style: .time)
+//      Text(entry.date, style: .time)
+      entryViewManager.render()
     }
 }
 
 struct TodayWidget: Widget {
     let kind: String = "TodayWidget"
+    let entryViewManager: RSUIEntryViewManager = RSUIEntryViewManager(
+      moduleName: "RCTWidget",
+      bundlePath: "Widget"
+    )
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            TodayWidgetEntryView(entry: entry)
+//      StaticConfiguration(kind: kind, provider: Provider()) { entry in
+//          TodayWidgetEntryView(entry: entry)
+//      }
+//      .configurationDisplayName("My Widget")
+//      .description("This is an example widget.")
+      StaticConfiguration(kind: kind, provider: Provider(entryViewManager: entryViewManager)) { entry in
+            TodayWidgetEntryView(entry: entry, entryViewManager: entryViewManager)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
 }
 
-struct TodayWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
+
