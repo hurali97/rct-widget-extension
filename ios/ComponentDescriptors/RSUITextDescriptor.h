@@ -15,14 +15,11 @@ char const RSUITextComponentName[] = "RSUITextView";
 class RSUITextProps : public Props, public BaseTextProps, public RSUIDynamicProps {
 public:
   RSUITextProps() {}
-//    RSUITextProps(const PropsParserContext &context, const RSUITextProps &sourceProps, const RawProps &rawProps);
   RSUITextProps(const PropsParserContext &context, const RSUITextProps &sourceProps, const RawProps &rawProps)
     : Props(context, sourceProps, rawProps),
       BaseTextProps::BaseTextProps(context, sourceProps, rawProps),
       RSUIDynamicProps(rawProps) {};
     
-//    using Props::setProp;
-//    using BaseTextProps::setProp;
     void setProp(
         const PropsParserContext &context,
         RawPropsPropNameHash hash,

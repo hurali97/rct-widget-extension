@@ -44,7 +44,7 @@ public:
 class RSUIParagraphState : public RSUIComponentState {
 public:
   RSUIParagraphState() {}
-  RSUIParagraphState(AttributedString const &attributedString, ParagraphAttributes const &paragraphAttributes, ParagraphLayoutManager const &layoutManager)
+  RSUIParagraphState(AttributedString const &attributedString, ParagraphAttributes const &paragraphAttributes, ParagraphLayoutManager const &paragraphLayoutManager)
     : attributedString(attributedString),
       paragraphAttributes(paragraphAttributes),
       paragraphLayoutManager(paragraphLayoutManager) {}
@@ -52,7 +52,7 @@ public:
   /*
    * All content of <Paragraph> component represented as an `AttributedString`.
    */
- AttributedString attributedString;
+  AttributedString attributedString;
 
   /*
    * Represents all visual attributes of a paragraph of text represented as
@@ -65,7 +65,7 @@ public:
    * text rendering infrastructure which is capable to render the
    * `AttributedString`.
    */
-    ParagraphLayoutManager paragraphLayoutManager;
+  ParagraphLayoutManager paragraphLayoutManager;
     
   folly::dynamic getDynamic() const;
 };
@@ -92,7 +92,7 @@ public:
     auto traits = ConcreteViewShadowNode::BaseTraits();
     traits.set(ShadowNodeTraits::Trait::LeafYogaNode);
     traits.set(ShadowNodeTraits::Trait::TextKind);
-
+    traits.set(ShadowNodeTraits::Trait::MeasurableYogaNode);
 #ifdef ANDROID
     // Unsetting `FormsStackingContext` trait is essential on Android where we
     // can't mount views inside `TextView`.
@@ -107,7 +107,6 @@ public:
    * `ParagraphShadowNode` uses the manager to measure text content
    * and construct `ParagraphState` objects.
    */
-//  void setTextLayoutManager(TextLayoutManager textLayoutManager);
     void setTextLayoutManager(
         std::shared_ptr<TextLayoutManager const> textLayoutManager);
 

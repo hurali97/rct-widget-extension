@@ -72,7 +72,7 @@ Content RSUIParagraphShadowNode::getContentWithMeasuredAttachments(
     auto laytableShadowNode =
         traitCast<LayoutableShadowNode const *>(attachment.shadowNode);
 
-    if (!laytableShadowNode) {
+    if (laytableShadowNode == nullptr) {
       continue;
     }
 
@@ -80,8 +80,8 @@ Content RSUIParagraphShadowNode::getContentWithMeasuredAttachments(
         laytableShadowNode->measure(layoutContext, localLayoutConstraints);
 
     // Rounding to *next* value on the pixel grid.
-    size.width += 0.01;
-    size.height += 0.01;
+    size.width += 0.01f;
+    size.height += 0.01f;
     size = roundToPixel<&ceil>(size, layoutContext.pointScaleFactor);
 
     auto fragmentLayoutMetrics = LayoutMetrics{};
