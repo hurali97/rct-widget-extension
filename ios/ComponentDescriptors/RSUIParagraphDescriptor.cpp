@@ -10,7 +10,7 @@
 #import <react/renderer/attributedstring/AttributedStringBox.h>
 #import <react/renderer/components/view/ViewShadowNode.h>
 #import <react/renderer/components/view/conversions.h>
-#include <react/renderer/core/TraitCast.h>
+#import <react/renderer/core/TraitCast.h>
 
 #import "RSUIParagraphDescriptor.h"
 #import "RSUIRawTextDescriptor.h"
