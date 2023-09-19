@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import <cmath>
+#include <cmath>
 
-#import <react/renderer/attributedstring/AttributedStringBox.h>
-#import <react/renderer/components/view/ViewShadowNode.h>
-#import <react/renderer/components/view/conversions.h>
-#import <react/renderer/core/TraitCast.h>
+#include <react/renderer/attributedstring/AttributedStringBox.h>
+#include <react/renderer/components/view/ViewShadowNode.h>
+#include <react/renderer/components/view/conversions.h>
+#include <react/renderer/core/TraitCast.h>
 
-#import "RSUIParagraphDescriptor.h"
-#import "RSUIRawTextDescriptor.h"
-#import "RSUITextDescriptor.h"
+#include "RSUIParagraphDescriptor.h"
+#include "RSUIRawTextDescriptor.h"
+#include "RSUITextDescriptor.h"
 
 inline ShadowView shadowViewFromShadowNode(ShadowNode const &shadowNode) {
   auto shadowView = ShadowView{shadowNode};
