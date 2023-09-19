@@ -1,3 +1,5 @@
+#pragma once
+
 #include <react/renderer/components/text/BaseTextProps.h>
 #include <react/renderer/components/text/BaseTextShadowNode.h>
 #include <react/renderer/core/ConcreteComponentDescriptor.h>
