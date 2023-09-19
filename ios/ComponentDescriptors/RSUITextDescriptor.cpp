@@ -1,4 +1,4 @@
-#import "RSUITextDescriptor.h"
+#include "RSUITextDescriptor.h"
 
 void RSUITextProps::setProp(
                             const facebook::react::PropsParserContext &context,

@@ -1,8 +1,8 @@
 
 #pragma once
 
-#import <react/renderer/attributedstring/conversions.h>
-#import <react/renderer/components/text/ParagraphComponentDescriptor.h>
+#include <react/renderer/attributedstring/conversions.h>
+#include <react/renderer/components/text/ParagraphComponentDescriptor.h>
 
 //#import <react/renderer/components/text/ParagraphEventEmitter.h>
 //#import <react/renderer/components/text/ParagraphProps.h>
@@ -10,7 +10,7 @@
 //#import <react/renderer/components/text/BaseTextShadowNode.h>
 //#import <react/renderer/core/LayoutContext.h>
 
-#import "RSUIComponentDescriptor.h"
+#include "RSUIComponentDescriptor.h"
 
 using namespace facebook::react;
 
