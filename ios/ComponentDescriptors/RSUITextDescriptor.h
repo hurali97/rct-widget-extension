@@ -1,10 +1,12 @@
-#import <react/renderer/components/text/BaseTextProps.h>
-#import <react/renderer/components/text/BaseTextShadowNode.h>
-#import <react/renderer/core/ConcreteComponentDescriptor.h>
-#import <react/renderer/components/view/ViewEventEmitter.h>
-#import <react/renderer/core/ConcreteShadowNode.h>
+#pragma once
 
-#import "RSUIComponentDescriptor.h"
+#include <react/renderer/components/text/BaseTextProps.h>
+#include <react/renderer/components/text/BaseTextShadowNode.h>
+#include <react/renderer/core/ConcreteComponentDescriptor.h>
+#include <react/renderer/components/view/ViewEventEmitter.h>
+#include <react/renderer/core/ConcreteShadowNode.h>
+
+#include "RSUIComponentDescriptor.h"
 
 #pragma once
 

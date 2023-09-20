@@ -10,14 +10,9 @@ import React from 'react';
 import { AppRegistry, StyleSheet, View, Text, Image } from 'react-native';
 import { LinearGradient, Shadow } from 'rct-widget-extension';
 
-const RCTWidget = (props) => {
+const RCTWidget = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-      }}
-    >
+    <View style={styles.container}>
       <View style={StyleSheet.absoluteFill}>
         <LinearGradient
           colors={['#A9D710', '#EF8552']}
@@ -27,34 +22,38 @@ const RCTWidget = (props) => {
       </View>
 
       <Shadow radius={3} offsetX={3} offsetY={3} color="black">
-        <Text
-          style={{
-            color: 'black',
-            fontSize: 15,
-            fontWeight: 'bold',
-            textAlign: 'center',
-          }}
-        >
-          SwiftUI Widget
-        </Text>
+        <Text style={styles.text}>SwiftUI Widget</Text>
       </Shadow>
-      <View
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <View style={styles.center}>
         <Image
-          style={{ width: 40, height: 40 }}
+          style={styles.image}
           source={require('./src/assets/react-native.png')}
         />
         <Image
-          style={{ width: 40, height: 40 }}
+          style={styles.image}
           source={require('./src/assets/swiftui.png')}
         />
       </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'black',
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  image: { width: 40, height: 40 },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 AppRegistry.registerComponent('RCTWidget', () => RCTWidget);

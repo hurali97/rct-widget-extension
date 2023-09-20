@@ -1,8 +1,8 @@
 
 #pragma once
 
-#import <react/renderer/components/text/conversions.h>
-#import <react/renderer/components/view/ViewComponentDescriptor.h>
+#include <react/renderer/components/text/conversions.h>
+#include <react/renderer/components/view/ViewComponentDescriptor.h>
 
 using namespace facebook::react;
 

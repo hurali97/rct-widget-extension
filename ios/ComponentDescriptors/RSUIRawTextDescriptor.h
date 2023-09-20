@@ -1,9 +1,9 @@
 
 #pragma once
 
-#import <react/renderer/components/text/RawTextShadowNode.h>
+#include <react/renderer/components/text/RawTextShadowNode.h>
 
-#import "RSUIComponentDescriptor.h"
+#include "RSUIComponentDescriptor.h"
 
 const char RSUIRawTextComponentName[] = "RSUIRawText";
 
