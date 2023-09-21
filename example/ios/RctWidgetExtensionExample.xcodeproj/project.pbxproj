@@ -271,6 +271,7 @@
 				616501E12A66FDE30015BA6C /* Frameworks */,
 				616501E22A66FDE30015BA6C /* Resources */,
 				C478D796B0BFA405F4571ACB /* [CP] Copy Pods Resources */,
+				617340C22ABC971B00D6022A /* Bundle React Native code and images */,
 			);
 			buildRules = (
 			);
@@ -382,6 +383,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RctWidgetExtensionExample/Pods-RctWidgetExtensionExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		617340C22ABC971B00D6022A /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../../scripts/react-native-xcode-widget.sh\"\n\nENTRY_FILE=\"Widget.js\" IS_LOCAL=true /bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

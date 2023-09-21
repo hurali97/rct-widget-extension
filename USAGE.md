@@ -25,3 +25,19 @@ yarn setup_widget
 ```bash
 cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
+
+- For Release builds, you need to add the following build phase script in your Widget Extension target ( See the below screenshot ):
+
+```bash
+set -e
+
+WITH_ENVIRONMENT="../node_modules/react-native/scripts/xcode/with-environment.sh"
+REACT_NATIVE_XCODE="../node_modules/rct-widget-extension/scripts/react-native-xcode-widget.sh"
+
+ENTRY_FILE="Widget.js" /bin/sh -c "$WITH_ENVIRONMENT $REACT_NATIVE_XCODE"
+
+```
+
+![Build Phase](./screenshots/add-script-to-build-phase.png)
+
+>NOTE: This above step is only temporary, with future efforts we will remove this step.
