@@ -74,7 +74,11 @@ std::shared_ptr<facebook::react::TurboModule> RSUITurboModuleProvider(const std:
 
 - (NSURL *)sourceURLForBridge:(__unused RCTBridge *)bridge
 {
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:_bundlePath];
+  #if DEBUG
+    return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:_bundlePath];
+  #else
+    return [[NSBundle mainBundle] URLForResource:@"widget" withExtension:@"jsbundle"];
+  #endif
 }
 
 - (std::unique_ptr<facebook::react::JSExecutorFactory>)jsExecutorFactoryForBridge:(RCTBridge *)bridge
