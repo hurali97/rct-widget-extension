@@ -15,6 +15,8 @@
 # with widget.jsbundle in the script. Ideally, we should create a PR to React Native
 # to add a new argument to the script to pass the bundle name.
 
+# We are also changing the path to the react-native folder inside node_modules.
+
 # ==============================================================================
 
 
@@ -73,8 +75,16 @@ case "$CONFIGURATION" in
 esac
 
 # Path to react-native folder inside node_modules
-# REACT_NATIVE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-REACT_NATIVE_DIR="../../react-native"
+REACT_NATIVE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../react-native" && pwd)"
+
+# If we have set IS_LOCAL in Xcode in the widget extension target and
+# in Bundle react native code and images build phase, we will use the
+# react-native folder inside example/node_modules/react-native.
+
+if [[ -n "$IS_LOCAL" ]]; then
+  REACT_NATIVE_DIR="../example/node_modules/react-native"
+fi
+
 # Most projects have their project root, one level up from their Xcode project dir (the "ios" directory)
 PROJECT_ROOT=${PROJECT_ROOT:-"$PROJECT_DIR/.."}
 
