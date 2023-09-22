@@ -61,7 +61,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Restore buildcache
-        uses: mikehardy/buildcache-action@v3
+        uses: mikehardy/buildcache-action@v2
 
       - name: Cache Pods
         uses: actions/cache@v3
