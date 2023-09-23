@@ -1,8 +1,5 @@
 name: CI
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -49,8 +46,8 @@ jobs:
 
   build-ios:
     runs-on: macos-13
-    # env:
-    #   TURBO_CACHE_DIR: .turbo/ios-cache
+    env:
+      TURBO_CACHE_DIR: example/ios/Pods
     steps:
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
@@ -63,35 +60,19 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
 
-      # - name: Cache turborepo for iOS
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ${{ env.TURBO_CACHE_DIR }}
-      #     key: ${{ runner.os }}-turborepo-ios-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-turborepo-ios-
+      - name: Restore buildcache
+        uses: mikehardy/buildcache-action@v2
 
-      # - name: Check turborepo cache for iOS
-      #   run: |
-      #     TURBO_CACHE_STATUS=$(node -p "($(yarn --silent turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}" --dry=json)).tasks.find(t => t.task === 'build:ios').cache.status")
-
-      #     if [[ $TURBO_CACHE_STATUS == "HIT" ]]; then
-      #       echo "turbo_cache_hit=1" >> $GITHUB_ENV
-      #     fi
-
-      # - name: Cache cocoapods
-      #   if: env.turbo_cache_hit != 1
-      #   id: cocoapods-cache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       **/ios/Pods
-      #     key: ${{ runner.os }}-cocoapods-${{ hashFiles('example/ios/Podfile.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-cocoapods-
+      - name: Cache Pods
+        uses: actions/cache@v3
+        id: pods-cache
+        with:
+          path: ${{ env.TURBO_CACHE_DIR }}
+          key: ${{ runner.os }}-pods-${{ hashFiles('example/ios/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
 
       - name: Install cocoapods
-        # if: env.turbo_cache_hit != 1 && steps.cocoapods-cache.outputs.cache-hit != 'true'
         run: |
           yarn setup_widget && yarn example pods
         env:
