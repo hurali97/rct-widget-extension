@@ -38,10 +38,10 @@
     "build:ios": "cd example/ios && xcodebuild CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ -workspace RctWidgetExtensionExample.xcworkspace -scheme RctWidgetExtensionExample -configuration Release -sdk iphonesimulator16.4",
     "bootstrap": "yarn example && yarn install && yarn setup_widget && yarn example pods",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build",
-    "setup_widget": "ruby ./scripts/modify_podfile.rb"
+    "setup_widget": "ruby ./scripts/setup_widget.rb"
   },
   "bin": {
-    "setup_widget": "./scripts/modify_podfile.rb"
+    "setup_widget": "./scripts/setup_widget.rb"
   },
   "keywords": [
     "react-native",

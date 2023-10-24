@@ -61,7 +61,7 @@ def update_graphics_conversions(isLocalEnv)
   end
 end
 
-def update_podfile(isLocalEnv)
+def update_podfile(isLocalEnv, widget_target_name)
   # Read the contents of the Podfile into a string
   podfile_path = 'ios/Podfile'
 
@@ -74,15 +74,17 @@ def update_podfile(isLocalEnv)
   # The string to search for post_install
   post_install_search_string = "post_install do |installer|"
 
-  # The lines to add above the search string
-  target_and_deps_lines = <<-ADD_LINES
-  target 'TodayWidgetExtension' do
+  target_lines = <<-ADD_LINES
+  target '#{widget_target_name}' do
     inherit! :complete
     # Pods for widget
   end
+  ADD_LINES
 
-  pod 'ReactCommon-Samples', :path => "../node_modules/react-native/ReactCommon/react/nativemodule/samples"
-  pod 'React-Fabric/components/rncore', :path => "../node_modules/react-native/ReactCommon"
+  # The lines to add above the search string
+  deps_lines = <<-ADD_LINES
+    pod 'ReactCommon-Samples', :path => "../node_modules/react-native/ReactCommon/react/nativemodule/samples"
+    pod 'React-Fabric/components/rncore', :path => "../node_modules/react-native/ReactCommon"
   ADD_LINES
 
   # The string to search for xcode_workaround
@@ -100,12 +102,25 @@ def update_podfile(isLocalEnv)
     end
     ADD_LINES
 
-  should_update_podfile = !podfile_content.include?(target_and_deps_lines) && !podfile_content.include?(app_extension_lines)
+  # Check if the target exists in the Podfile
+  should_update_podfile_with_target = !podfile_content.include?(target_lines) && !isLocalEnv
+
+  if should_update_podfile_with_target
+    # Insert the lines above the post_install_search_string
+    modified_podfile_content = podfile_content.gsub(post_install_search_string, "#{target_lines}\n#{post_install_search_string}")
+
+    # Write the modified content back to the Podfile
+    File.write(podfile_path, modified_podfile_content)
+
+    success("Widget Target added in Podfile successfully!\n")
+  end
+
+  should_update_podfile_with_required_code = !podfile_content.include?(deps_lines) && !podfile_content.include?(app_extension_lines)
 
   # Check if the post_install_search_string and xcode_workaround_search_string exists in the Podfile
-  if should_update_podfile
+  if should_update_podfile_with_required_code
     # Insert the lines above the post_install_search_string
-    modified_podfile_content = podfile_content.gsub(post_install_search_string, "\n#{target_and_deps_lines}\n#{post_install_search_string}")
+    modified_podfile_content = podfile_content.gsub(post_install_search_string, "\n#{deps_lines}\n#{post_install_search_string}")
 
     # Insert the lines below the xcode_workaround_search_string
     modified_podfile_content = modified_podfile_content.gsub(xcode_workaround_search_string, "#{xcode_workaround_search_string}\n\n#{app_extension_lines}")
