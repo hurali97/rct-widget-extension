@@ -15,6 +15,7 @@
     "cpp",
     "scripts",
     "*.podspec",
+    "template",
     "!lib/typescript/example",
     "!ios/build",
     "!android/build",
