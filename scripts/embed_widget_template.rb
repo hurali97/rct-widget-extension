@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'xcodeproj'
 
-def embed_widget_target(target_project_path, new_widget_target_name)
+def embed_widget_target(target_project_path, new_widget_target_name, app_target_bundle_identifier)
   source_files = ['Info.plist', 'TemplateWidget.swift', 'TemplateWidgetBundle.swift']
 
   # Open the target Xcode project
@@ -27,7 +27,7 @@ def embed_widget_target(target_project_path, new_widget_target_name)
 
   # Add source files to the new Widget Extension target
   source_files.each do |source_file|
-      source_path = File.join('./template/TemplateWidget/', source_file)
+      source_path = File.join('node_modules/rct-widget-extension/template/TemplateWidget/', source_file)
 
       destination_file = source_file
 
@@ -112,14 +112,10 @@ def embed_widget_target(target_project_path, new_widget_target_name)
   # Update the Swift version for the new_widget_target
   swift_version = '5.0' # Specify the desired Swift version
 
-  # Get the bundle identifier from the main app target's build settings
-  app_bundle_identifier = app_target.build_configuration_list
-    .build_settings('Debug')['PRODUCT_BUNDLE_IDENTIFIER']
-
   # Modify the build settings for the new_widget_target
   new_widget_target.build_configurations.each do |config|
     config.build_settings['SWIFT_VERSION'] = swift_version
-    config.build_settings['PRODUCT_BUNDLE_IDENTIFIER'] = "org.reactjs.native.example.RctWidgetExtensionExample.#{new_widget_target_name}"
+    config.build_settings['PRODUCT_BUNDLE_IDENTIFIER'] = "#{app_target_bundle_identifier}.#{new_widget_target_name}"
     config.build_settings['ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME'] = "AccentColor";
     config.build_settings['ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME'] = "WidgetBackground";
     config.build_settings['CLANG_ANALYZER_NONNULL'] = "YES";

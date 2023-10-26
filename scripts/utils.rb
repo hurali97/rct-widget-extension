@@ -115,12 +115,12 @@ def update_podfile(isLocalEnv, widget_target_name)
     success("Widget Target added in Podfile successfully!\n")
   end
 
-  should_update_podfile_with_required_code = !podfile_content.include?(deps_lines) && !podfile_content.include?(app_extension_lines)
+  should_update_podfile_with_required_code = !modified_podfile_content.include?(deps_lines) && !modified_podfile_content.include?(app_extension_lines)
 
   # Check if the post_install_search_string and xcode_workaround_search_string exists in the Podfile
   if should_update_podfile_with_required_code
     # Insert the lines above the post_install_search_string
-    modified_podfile_content = podfile_content.gsub(post_install_search_string, "\n#{deps_lines}\n#{post_install_search_string}")
+    modified_podfile_content = modified_podfile_content.gsub(post_install_search_string, "\n#{deps_lines}\n#{post_install_search_string}")
 
     # Insert the lines below the xcode_workaround_search_string
     modified_podfile_content = modified_podfile_content.gsub(xcode_workaround_search_string, "#{xcode_workaround_search_string}\n\n#{app_extension_lines}")

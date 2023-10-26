@@ -3,7 +3,7 @@
 require_relative './utils'
 require_relative './embed_widget_template'
 
-isLocalEnv = Dir.exist?('example')
+_isLocalEnv = Dir.exist?('example')
 
 def update_files(isLocalEnv, widget_target_name)
   update_conversions(isLocalEnv)
@@ -31,7 +31,15 @@ if _isLocalEnv == false
     exit 1
   end
 
-  embed_widget_target(target_project_path, widget_target_name)
+  puts "Bundle Identifier of your app target (e.g., org.demo.app) ?"
+  app_target_bundle_identifier = gets.chomp
+
+  if app_target_bundle_identifier.empty?
+    error("Bundle Identifier cannot be empty.")
+    exit 1
+  end
+
+  embed_widget_target(target_project_path, widget_target_name, app_target_bundle_identifier)
 
   puts "Do you want to automatically update the Podfile? (Y/N)"
   response = gets.chomp.downcase
