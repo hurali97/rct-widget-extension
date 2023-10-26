@@ -65,7 +65,7 @@ struct TodayWidget: Widget {
 //      }
 //      .configurationDisplayName("My Widget")
 //      .description("This is an example widget.")
-      StaticConfiguration(kind: kind, provider: Provider(entryViewManager: entryViewManager)) { entry in
+        StaticConfiguration(kind: kind, provider: Provider(entryViewManager: entryViewManager)) { entry in
             TodayWidgetEntryView(entry: entry, entryViewManager: entryViewManager)
         }
         .configurationDisplayName("My Widget")

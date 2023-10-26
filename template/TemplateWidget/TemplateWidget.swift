@@ -5,8 +5,11 @@
 
 import WidgetKit
 import SwiftUI
+import RctWidgetExtension
 
 struct Provider: TimelineProvider {
+    let entryViewManager: RSUIEntryViewManager
+
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
@@ -38,27 +41,25 @@ struct SimpleEntry: TimelineEntry {
 
 struct TemplateWidgetEntryView : View {
     var entry: Provider.Entry
-
+    var entryViewManager: RSUIEntryViewManager
+  
     var body: some View {
-        Text(entry.date, style: .time)
+      entryViewManager.render()
     }
 }
 
 struct TemplateWidget: Widget {
     let kind: String = "TemplateWidget"
+    let entryViewManager: RSUIEntryViewManager = RSUIEntryViewManager(
+      moduleName: "RCTWidget",
+      bundlePath: "Widget"
+    )
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            TemplateWidgetEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: Provider(entryViewManager: entryViewManager)) { entry in
+            TemplateWidgetEntryView(entry: entry, entryViewManager: entryViewManager)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
-    }
-}
-
-struct TemplateWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        TemplateWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
