@@ -164,6 +164,20 @@ def embed_widget_target(target_project_path, new_widget_target_name, app_target_
   foundation_file_reference = target_project.files.find { |file| file.display_name == 'Foundation.framework' }
   new_widget_target.frameworks_build_phase.remove_file_reference(foundation_file_reference)
 
+  # Add a new shell script build phase
+  script_phase = new_widget_target.new_shell_script_build_phase('Bundle React Native code and images')
+
+  # Set the shell script content
+  script_phase.shell_script = <<~SCRIPT
+    #!/bin/sh
+    set -e
+
+    WITH_ENVIRONMENT="../node_modules/react-native/scripts/xcode/with-environment.sh"
+    REACT_NATIVE_XCODE="../node_modules/rct-widget-extension/scripts/react-native-xcode-widget.sh"
+    
+    ENTRY_FILE="Widget.js" /bin/sh -c "$WITH_ENVIRONMENT $REACT_NATIVE_XCODE"    
+  SCRIPT
+
   # Save the target project with the new Widget Extension target
   target_project.save
 
