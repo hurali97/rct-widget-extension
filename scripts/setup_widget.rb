@@ -66,7 +66,7 @@ if isLocalEnv == false
   embed_widget_target(target_project_path, widget_target_name, app_target_bundle_identifier)
 
   if options[:updatePodfile]
-    update_files(_isLocalEnv, widget_target_name)
+    update_files(isLocalEnv, widget_target_name)
   else
     update_conversions(isLocalEnv)
     update_graphics_conversions(isLocalEnv)
