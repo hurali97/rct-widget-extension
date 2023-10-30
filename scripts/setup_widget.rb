@@ -72,5 +72,5 @@ if isLocalEnv == false
     update_graphics_conversions(isLocalEnv)
   end
 else
-  update_files(isLocalEnv)
+  update_files(isLocalEnv, nil)
 end

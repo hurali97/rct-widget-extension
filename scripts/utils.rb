@@ -115,6 +115,10 @@ def update_podfile(isLocalEnv, widget_target_name)
     success("Widget Target added in Podfile successfully!\n")
   end
 
+  if modified_podfile_content == nil
+    modified_podfile_content = podfile_content
+  end
+
   should_update_podfile_with_required_code = !modified_podfile_content.include?(deps_lines) && !modified_podfile_content.include?(app_extension_lines)
 
   # Check if the post_install_search_string and xcode_workaround_search_string exists in the Podfile
