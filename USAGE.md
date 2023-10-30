@@ -12,32 +12,35 @@ This package is not on NPM yet, so you have to install it manually.
 yarn add ./rct-widget-extension-0.1.0.tgz
 ```
 
-- Once installation is completed, run the following command from the root of your project:
+#### Automatic Setup
+- Once the installation is completed, run the following command from the root of your project. This command will allow you to automatically create Widget Target with everything setup for using Widgets. It will also update the podfile with required dependencies and configurations.
+
+If you want to update `Podfile` manually, pass false to the `--updatePodfile` flag and follow the steps from manual section.:
 
 ```bash
-yarn setup_widget
+yarn setup_widget --widgetTargetName AbcWidgetExtension --xcodeProjectPath ./ios/DemoWidgetRN.xcodeproj --bundleID org.reactjs.native.example.DemoWidgetRN --updatePodfile true
 ```
 
-> This will add the required files in your project and also add the required dependencies.
+> This will add the required files in your project, the required dependencies and the widget target automatically.
 
-- Finally, run the following command from the root of your project:
+#### Manual Setup
+
+To be Added Later
+
+-- --
+
+
+| Option          | Description                                                                                                                                                  | Usage                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| `widgetTargetName`      | Name of the Widget Target you want to create                                                                                         | `--widgetTargetName AbcWidgetExtension`                 |
+| `xcodeProjectPath`           | Path to your xcode project                                                                                                             | `--xcodeProjectPath ./ios/DemoWidgetRN.xcodeproj`                    |
+| `bundleID`           | Bundle id of your App                                                                                                            | `--bundleID org.reactjs.native.example.DemoWidgetRN`                    |
+| `updatePodfile`           | Whether this script should update podfile                                                                                                             | `--updatePodfile true`                    |
+
+-- --
+
+- Finally to install the Pods, run the following command from the root of your project:
 
 ```bash
 cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
-
-- For Release builds, you need to add the following build phase script in your Widget Extension target ( See the below screenshot ):
-
-```bash
-set -e
-
-WITH_ENVIRONMENT="../node_modules/react-native/scripts/xcode/with-environment.sh"
-REACT_NATIVE_XCODE="../node_modules/rct-widget-extension/scripts/react-native-xcode-widget.sh"
-
-ENTRY_FILE="Widget.js" /bin/sh -c "$WITH_ENVIRONMENT $REACT_NATIVE_XCODE"
-
-```
-
-![Build Phase](./screenshots/add-script-to-build-phase.png)
-
->NOTE: This above step is only temporary, with future efforts we will remove this step.
