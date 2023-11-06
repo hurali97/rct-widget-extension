@@ -1,5 +1,7 @@
 # rct-widget-extension
 
+Read [USAGE](./USAGE.md) for steps on how to use.
+
 ## Motivation
 
 With the launch of Dynamic Island and it's attractive UI that can be used to display live activities and other UI, it made me motivated enough to use Dynamic Island with react-native. With lack of knowledge about this new feature, I thought this might be doable by creating a simple Native Module or Native Component but I was proven wrong, since Dynamic Island is used to show Live Activities and the Live Activities are shown with the help of Widgets. 

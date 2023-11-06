@@ -1,8 +1,6 @@
 //
-//  TodayWidget.swift
-//  TodayWidget
-//
-//  Created by Hur Ali on 18/07/2023.
+//  TemplateWidget.swift
+//  TemplateWidget
 //
 
 import WidgetKit
@@ -41,36 +39,27 @@ struct SimpleEntry: TimelineEntry {
     let date: Date
 }
 
-struct TodayWidgetEntryView : View {
+struct TemplateWidgetEntryView : View {
     var entry: Provider.Entry
     var entryViewManager: RSUIEntryViewManager
   
-
     var body: some View {
-//      Text(entry.date, style: .time)
       entryViewManager.render()
     }
 }
 
-struct TodayWidget: Widget {
-    let kind: String = "TodayWidget"
+struct TemplateWidget: Widget {
+    let kind: String = "TemplateWidget"
     let entryViewManager: RSUIEntryViewManager = RSUIEntryViewManager(
       moduleName: "RCTWidget",
       bundlePath: "Widget"
     )
 
     var body: some WidgetConfiguration {
-//      StaticConfiguration(kind: kind, provider: Provider()) { entry in
-//          TodayWidgetEntryView(entry: entry)
-//      }
-//      .configurationDisplayName("My Widget")
-//      .description("This is an example widget.")
         StaticConfiguration(kind: kind, provider: Provider(entryViewManager: entryViewManager)) { entry in
-            TodayWidgetEntryView(entry: entry, entryViewManager: entryViewManager)
+            TemplateWidgetEntryView(entry: entry, entryViewManager: entryViewManager)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
 }
-
-
