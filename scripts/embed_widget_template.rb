@@ -1,6 +1,22 @@
 #!/usr/bin/env ruby
 require 'rubygems'
+require 'fileutils'
 require 'xcodeproj'
+
+def move_folder_recursively(source, destination)
+  FileUtils.mkdir_p(destination) # Create the destination directory if it doesn't exist
+
+  Dir.glob(File.join(source, '**', '*')).each do |item|
+    next if ['.', '..'].include?(File.basename(item)) # Skip current and parent directory entries
+
+    new_item = File.join(destination, item.sub(source, '')) # Calculate the new path for the item
+    if File.directory?(item)
+      FileUtils.mkdir_p(new_item) # Create the new directory
+    else
+      FileUtils.cp(item, new_item) # Move the file
+    end
+  end
+end
 
 def embed_widget_target(target_project_path, new_widget_target_name, app_target_bundle_identifier)
   source_files = ['Info.plist', 'TemplateWidget.swift', 'TemplateWidgetBundle.swift']
@@ -56,6 +72,8 @@ def embed_widget_target(target_project_path, new_widget_target_name, app_target_
   end
 
   new_widget_target.add_file_references(file_references)
+  path_to_assets = "#{group_path}/Assets.xcassets"
+  move_folder_recursively('node_modules/rct-widget-extension/template/TemplateWidget/Assets.xcassets', path_to_assets)
 
   # Create a new PBXContainerItemProxy for the new_widget_target
   container_item_proxy = target_project.new(Xcodeproj::Project::Object::PBXContainerItemProxy)
@@ -177,6 +195,14 @@ def embed_widget_target(target_project_path, new_widget_target_name, app_target_
     
     ENTRY_FILE="Widget.js" /bin/sh -c "$WITH_ENVIRONMENT $REACT_NATIVE_XCODE"    
   SCRIPT
+
+  # Find or create the 'Resources' group within the target
+  resources_group = new_widget_target.resources_build_phase || new_widget_target.new_resources_build_phase(nil)
+
+  assets_ref = widget_group.new_reference("Assets.xcassets")
+
+  # Add the Assets.xcassets folder to the target's resources
+  assets_file_reference = resources_group.add_file_reference(assets_ref)
 
   # Save the target project with the new Widget Extension target
   target_project.save
