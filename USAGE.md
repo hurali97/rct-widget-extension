@@ -13,12 +13,33 @@ yarn add ./rct-widget-extension-0.1.0.tgz
 ```
 
 #### Automatic Setup
-- Once the installation is completed, run the following command from the root of your project. This command will allow you to automatically create Widget Target with everything setup for using Widgets. It will also update the podfile with required dependencies and configurations.
+- Create a `widget.config.js` file in the root of your project with the following structure:
+
+```js
+{
+    "main": {
+        "targetProjectPath": "./ios/Demo.xcodeproj",
+        "appTargetBundleIdentifier": "org.demo.app"
+    },
+    "widgets": {
+        "AbcWidgetExtension": {
+            "name": "AbcWidget",
+            "description": "Hey, I'm an ABC widget!"
+        },
+        "XYZWidgetExtension": {
+            "name": "XYZWidget",
+            "description": "Hey, I'm a XYZ widget!"
+        }
+    }
+}
+```
+
+- Once the config file is created, run the following command from the root of your project. This command will allow you to automatically create Widget Target with everything setup for using Widgets. It will also update the podfile with required dependencies and configurations.
 
 If you want to update `Podfile` manually, pass false to the `--updatePodfile` flag and follow the steps from manual section.:
 
 ```bash
-yarn setup_widget --widgetTargetName AbcWidgetExtension --xcodeProjectPath ./ios/DemoWidgetRN.xcodeproj --bundleID org.reactjs.native.example.DemoWidgetRN --updatePodfile true
+yarn setup_widget --updatePodfile true
 ```
 
 > This will add the required files in your project, the required dependencies and the widget target automatically.
@@ -26,16 +47,6 @@ yarn setup_widget --widgetTargetName AbcWidgetExtension --xcodeProjectPath ./ios
 #### Manual Setup
 
 To be Added Later
-
--- --
-
-
-| Option          | Description                                                                                                                                                  | Usage                          |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| `widgetTargetName`      | Name of the Widget Target you want to create                                                                                         | `--widgetTargetName AbcWidgetExtension`                 |
-| `xcodeProjectPath`           | Path to your xcode project                                                                                                             | `--xcodeProjectPath ./ios/DemoWidgetRN.xcodeproj`                    |
-| `bundleID`           | Bundle id of your App                                                                                                            | `--bundleID org.reactjs.native.example.DemoWidgetRN`                    |
-| `updatePodfile`           | Whether this script should update podfile                                                                                                             | `--updatePodfile true`                    |
 
 -- --
 
