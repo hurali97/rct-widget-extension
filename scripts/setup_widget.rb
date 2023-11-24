@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'optparse'
+require 'json'
 require_relative './utils'
 require_relative './embed_widget_template'
 
@@ -8,18 +9,6 @@ options = {}
 
 opt_parser = OptionParser.new do |opts|
   opts.banner = 'Usage: setup_widget [options]'
-
-  opts.on('--widgetTargetName WIDGET_TARGET_NAME', 'Name of the widget extension target (e.g., TodayWidgetExtension)') do |widget_target_name|
-    options[:widgetTargetName] = widget_target_name
-  end
-
-  opts.on('--xcodeProjectPath XCODE_PROJECT_PATH', 'Path to your App.xcodeproj (e.g., ./ios/App.xcodeproj)') do |xcode_project_path|
-    options[:xcodeProjectPath] = xcode_project_path
-  end
-
-  opts.on('--bundleID BUNDLE_ID', 'Specify the bundle ID') do |bundle_id|
-    options[:bundleID] = bundle_id
-  end
 
   opts.on('--updatePodfile BOOLEAN', 'Specify whether to update Podfile (true/false)') do |update_podfile|
     options[:updatePodfile] = update_podfile.downcase == 'true'
@@ -35,42 +24,50 @@ opt_parser.parse!
 
 isLocalEnv = Dir.exist?('example')
 
+def parse_widget_config(_isLocalEnv, options)
+  # Specify the path to your JSON file
+  json_file_path = './widget.config.json'
+
+  # Read the contents of the JSON file
+  json_data = File.read(json_file_path)
+    
+  # Parse the JSON data
+  parsed_data = JSON.parse(json_data)
+
+  target_project_path = parsed_data['main']['targetProjectPath']
+  app_target_bundle_identifier = parsed_data['main']['appTargetBundleIdentifier']
+
+  widgets_from_config = parsed_data['widgets']
+
+  # Get the keys
+  widget_targets = widgets_from_config.keys
+
+  # Now you can iterate over the keys or access them as needed
+  widget_targets.each do |key|
+    widget_details = widgets_from_config[key]
+    widget_target_name = key
+    embed_widget_target(target_project_path, app_target_bundle_identifier, widget_target_name, widget_details)
+    if options[:updatePodfile]
+      update_files(_isLocalEnv, widget_target_name)
+    else
+      update_conversions(_isLocalEnv)
+      update_graphics_conversions(_isLocalEnv)
+    end
+  end
+end
+
+
 def update_files(_isLocalEnv, widget_target_name)
   update_conversions(_isLocalEnv)
   update_graphics_conversions(_isLocalEnv)
 
-  warn("\nAdding TodayWidgetExtension target & dependencies to the Podfile\n")
+  warn("\nAdding WidgetExtension target & dependencies to the Podfile\n")
   update_podfile(_isLocalEnv, widget_target_name)
 end
 
 
 if isLocalEnv == false
-  unless options.key?(:widgetTargetName)
-    error("Widget target name can not be empty.")
-    exit 1
-  end
-  widget_target_name = options[:widgetTargetName]
-
-  unless options.key?(:xcodeProjectPath)
-    error("Xcode project path can not be empty.")
-    exit 1
-  end
-  target_project_path = options[:xcodeProjectPath]
-
-  unless options.key?(:bundleID)
-    error("Bundle Identifier can not be empty.")
-    exit 1
-  end
-  app_target_bundle_identifier = options[:bundleID]
-
-  embed_widget_target(target_project_path, widget_target_name, app_target_bundle_identifier)
-
-  if options[:updatePodfile]
-    update_files(isLocalEnv, widget_target_name)
-  else
-    update_conversions(isLocalEnv)
-    update_graphics_conversions(isLocalEnv)
-  end
+  parse_widget_config(isLocalEnv, options)
 else
   update_files(isLocalEnv, nil)
 end
