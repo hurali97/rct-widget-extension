@@ -18,7 +18,7 @@ def move_folder_recursively(source, destination)
   end
 end
 
-def embed_widget_target(target_project_path, new_widget_target_name, app_target_bundle_identifier)
+def embed_widget_target(target_project_path, app_target_bundle_identifier, new_widget_target_name, widget_details)
   source_files = ['Info.plist', 'TemplateWidget.swift', 'TemplateWidgetBundle.swift']
 
   # Open the target Xcode project
@@ -203,6 +203,17 @@ def embed_widget_target(target_project_path, new_widget_target_name, app_target_
 
   # Add the Assets.xcassets folder to the target's resources
   assets_file_reference = resources_group.add_file_reference(assets_ref)
+
+  widget_description = widget_details['description']
+  widget_name = widget_details['name']
+
+  destination_path = File.join(group_path, "#{new_widget_target_name}.swift")
+  template_widget_content = File.read(destination_path)
+  template_widget_content = template_widget_content.gsub('My Widget', widget_name)
+  template_widget_content = template_widget_content.gsub('This is an example widget.', widget_description)
+
+  # Write the modified content back to the file
+  File.write(destination_path, template_widget_content)
 
   # Save the target project with the new Widget Extension target
   target_project.save
